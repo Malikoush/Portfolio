@@ -1,0 +1,127 @@
+---
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Présentation | Martin OUEDRAOGO" description="Présentation de Martin OUEDRAOGO, Concepteur-Développeur Web">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Présentation"
+				tagline="Découvrez mon parcours, mes valeurs et ce qui m'anime au quotidien."
+			>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Mes valeurs</h2>
+				<div class="content">
+					<p>
+						L'ingénierie du développement ne se résume pas à écrire des lignes de code ; c'est avant tout la résolution de problèmes concrets ayant un impact sur le quotidien des utilisateurs. Dans cette optique, je place l'<strong>humain au centre de ma démarche technique</strong>. 
+					</p>
+					<p>
+						Je suis profondément convaincu qu'un bon ingénieur se doit d'être <strong>conscient et responsable</strong>. Conscient des enjeux d'accessibilité numérique pour ne laisser personne de côté, et responsable vis-à-vis des données personnelles qui nous sont confiées (Secure by Design). La technologie doit rester un outil au service du bien commun, et c'est avec cette boussole éthique que j'aborde chaque nouveau projet.
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Mon projet professionnel</h2>
+				<div class="content">
+					<p>
+						Actuellement en alternance chez 3F, j'ai pour ambition à court terme de consolider mes compétences en <strong>développement web full-stack et architecture logicielle</strong>. À moyen terme, je souhaite évoluer vers un rôle de Lead Tech ou de Scrum Master Technique, où je pourrai allier mon appétence pour le pilotage de projet à mon expertise de terrain.
+					</p>
+					<p>
+						Personnellement, je vise l'obtention de certifications professionnelles reconnues, notamment en sécurité (OSCP) et en agilité (PSM I), pour valider mes acquis et rester constamment à jour face aux évolutions rapides de notre secteur.
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Mes principales qualités humaines</h2>
+				<div class="content">
+					<ul>
+						<li><strong>L'empathie :</strong> Indispensable pour comprendre le besoin réel d'un client au-delà du cahier des charges, et pour concevoir des interfaces véritablement intuitives.</li>
+						<li><strong>La résilience face à l'échec :</strong> Le débogage complexe m'a appris à considérer l'erreur non pas comme un blocage, mais comme une étape nécessaire vers la solution.</li>
+						<li><strong>Le sens du collectif :</strong> Convaincu qu'une petite équipe soudée produit un meilleur code qu'un génie isolé. J'aime partager mes connaissances et apprendre des autres lors des revues de code.</li>
+						<li><strong>La curiosité insatiable :</strong> Moteur de ma veille technologique constante, elle me pousse à toujours chercher le "pourquoi" derrière le "comment".</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Mes centres d'intérêt</h2>
+				<div class="content">
+					<p>
+						En dehors du numérique, je nourris un fort intérêt pour la <strong>lecture de bandes dessinées et mangas</strong>, ce qui a d'ailleurs inspiré l'un de mes projets personnels d'application mobile. Cette passion m'aide à cultiver mon sens du design et de la narration visuelle.
+					</p>
+					<p>
+						Je suis également adepte de <strong>sports d'équipe</strong>, qui renforcent ma capacité à collaborer vers un objectif commun et m'offrent un équilibre nécessaire face aux écrans. Enfin, je m'intéresse de près aux sujets de vulgarisation scientifique et spatiale.
+					</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+	
+	.content ul {
+		padding-left: 1.5rem;
+	}
+	
+	.content li {
+		margin-bottom: 0.75rem;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

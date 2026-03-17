@@ -1,0 +1,243 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Hero from '../../components/Hero.astro';
+import Icon from '../../components/Icon.astro';
+import Pill from '../../components/Pill.astro';
+
+export async function getStaticPaths() {
+	const realisations = await getCollection('realisations');
+	return realisations.map((entry) => ({
+		params: { slug: entry.id },
+	}));
+}
+
+const { slug } = Astro.params;
+const allRealisations = await getCollection('realisations');
+const entry = allRealisations.find((r) => r.id === slug);
+if (!entry) throw new Error(`Réalisation introuvable: ${slug}`);
+
+// use helper from astro:content
+const { Content } = await render(entry);
+
+const allCompetences = await getCollection('competences');
+const relatedCompetences = allCompetences.filter(c => 
+	entry.data.relatedCompetences?.includes(c.id)
+);
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.description}>
+	<div class="stack gap-20">
+		<div class="stack gap-15">
+			<header>
+				<div class="wrapper stack gap-2">
+					<a class="back-link" href="/realisations/"><Icon icon="arrow-left" /> Réalisations</a>
+					<Hero title={entry.data.title} align="start">
+						<div class="details">
+							<div class="tags">
+								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+							</div>
+							<p class="description">{entry.data.description}</p>
+						</div>
+					</Hero>
+				</div>
+			</header>
+			<main class="wrapper">
+				<div class="stack gap-10 content">
+					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
+					<div class="content-body">
+					<Content />
+					
+					{relatedCompetences.length > 0 && (
+						<section class="related-section">
+							<h3>Compétences mises en œuvre</h3>
+							<ul class="related-list">
+								{relatedCompetences.map((comp) => (
+									<li>
+										<a href={`/competences/${comp.id}`} class="related-link">
+											<span class="icon">{comp.data.icon}</span>
+											{comp.data.title}
+										</a>
+									</li>
+								))}
+							</ul>
+						</section>
+					)}
+				</div>
+			</main>
+		</div>
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	header {
+		padding-bottom: 2.5rem;
+		border-bottom: 1px solid var(--gray-800);
+	}
+
+	.back-link {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--gray-300);
+		text-decoration: none;
+		font-size: var(--text-sm);
+		transition: color var(--theme-transition);
+	}
+
+	.back-link:hover,
+	.back-link:focus {
+		color: var(--gray-0);
+	}
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		padding: 0.5rem;
+		gap: 1.5rem;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.tags {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
+
+	.description {
+		font-size: var(--text-lg);
+		max-width: 54ch;
+	}
+
+	.content {
+		max-width: 65ch;
+		margin-inline: auto;
+	}
+
+	.content > img {
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-sm);
+		background: var(--gradient-subtle);
+		border: 1px solid var(--gray-800);
+	}
+
+	.content-body > :global(*) {
+		margin-bottom: 1.5rem;
+	}
+
+	.content-body :global(h2) {
+		font-size: var(--text-2xl);
+		color: var(--gray-0);
+		margin-top: 3rem;
+		margin-bottom: 1.5rem;
+		border-bottom: 1px solid var(--gray-800);
+		padding-bottom: 0.5rem;
+	}
+
+	.content-body :global(h3) {
+		font-size: var(--text-xl);
+		color: var(--gray-100);
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.content-body :global(p) {
+		color: var(--gray-300);
+		line-height: 1.7;
+	}
+
+	.content-body :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+		color: var(--accent-regular);
+	}
+
+	.content-body :global(a:hover),
+	.content-body :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	.content-body :global(ul) {
+		padding-left: 1.5rem;
+		color: var(--gray-300);
+		margin-bottom: 1.5rem;
+	}
+
+	.content-body :global(li) {
+		margin-bottom: 0.5rem;
+	}
+
+	.content-body :global(strong) {
+		color: var(--gray-100);
+	}
+
+	.related-section {
+		margin-top: 4rem;
+		padding: 2rem;
+		background-color: var(--gray-999_40);
+		border-radius: 1.5rem;
+		border: 1px solid var(--gray-800);
+	}
+
+	.related-section h3 {
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+		margin-bottom: 1.5rem;
+	}
+
+	.related-list {
+		list-style: none;
+		padding: 0;
+		display: grid;
+		gap: 1rem;
+	}
+
+	.related-link {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		color: var(--gray-200);
+		text-decoration: none;
+		font-size: var(--text-lg);
+		transition: transform var(--theme-transition), background-color var(--theme-transition);
+		padding: 1rem;
+		border-radius: 1rem;
+		background-color: var(--gray-900);
+		border: 1px solid var(--gray-800);
+	}
+
+	.related-link .icon {
+		font-size: 1.5rem;
+	}
+
+	.related-link:hover {
+		color: var(--accent-text-over);
+		transform: translateY(-3px);
+		background-color: var(--accent-regular);
+		border-color: var(--accent-regular);
+	}
+
+	@media (min-width: 50em) {
+		.back-link {
+			display: block;
+			align-self: flex-start;
+		}
+
+		.details {
+			flex-direction: row;
+			gap: 2.5rem;
+		}
+
+		.content :global(blockquote) {
+			font-size: var(--text-lg);
+		}
+
+		.related-list {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+</style>

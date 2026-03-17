@@ -2,13 +2,19 @@
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-	project: CollectionEntry<'work'>;
+	project: CollectionEntry<any>;
+	/**
+	 * base path to use for the link (e.g. '/work' or '/realisations').
+	 * Defaults to '/work' for backwards compatibility.
+	 */
+	base?: string;
 }
 
-const { data, id } = Astro.props.project;
+const { data, id, collection } = Astro.props.project;
+const base = Astro.props.base || `/${collection || 'work'}`;
 ---
 
-<a class="card" href={`/work/${id}`}>
+<a class="card" href={`${base}/${id}`}>
 	<span class="title">{data.title}</span>
 	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 </a>
