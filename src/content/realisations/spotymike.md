@@ -1,14 +1,15 @@
 ---
 title: SpotyMike
 description: Application musicale intelligente connectée aux APIs Spotify et Deezer.
-img: /assets/stock-1.jpg
+img: /assets/IMG_spoty.png
 img_alt: Interface de l'application musicale SpotyMike
 date: 2024-05-15
 tags:
   - API
   - JavaScript
   - Node.js
-relatedCompetences: ["api-integration", "agilite", "gestion-de-projet", "design-ux"]
+relatedCompetences:
+  ["api-integration", "agilite", "gestion-de-projet", "design-ux"]
 ---
 
 ## Présentation du projet
@@ -20,13 +21,15 @@ SpotyMike est une application web musicale intelligente agissant comme un agrég
 **Contexte** : Projet académique de fin d'année réalisé en équipe de 4 étudiants sur une durée de 3 mois, simulant des conditions de démarrage de startup.
 **Objectif client** : Fournir une preuve de concept (POC) fonctionnelle d'un agrégateur musical avec une expérience utilisateur fluide.
 **Enjeux / Risques** :
-- *Techniques* : Gérer deux systèmes d'authentification OAuth différents et harmoniser deux formats de données hétérogènes.
-- *Organisationnels* : Livrer un produit stable dans un temps limité avec une équipe étudiante aux emplois du temps fragmentés.
-- *Pour l'équipe* : Risque de blocage lié aux limites de quota imposées par les APIs publiques (rate limiting).
+
+- _Techniques_ : Gérer deux systèmes d'authentification OAuth différents et harmoniser deux formats de données hétérogènes.
+- _Organisationnels_ : Livrer un produit stable dans un temps limité avec une équipe étudiante aux emplois du temps fragmentés.
+- _Pour l'équipe_ : Risque de blocage lié aux limites de quota imposées par les APIs publiques (rate limiting).
 
 ## Étapes de réalisation (Ce que j'ai fait)
 
 En tant que référent technique et développeur full-stack sur ce projet, j'ai pris en charge les étapes suivantes :
+
 1. **Architecture** : Conception de l'architecture backend (Node.js/Express) pour servir de proxy entre le client et les APIs tierces, masquant ainsi les clés d'API.
 2. **Authentification** : Implémentation du flux OAuth2 pour la connexion au compte Spotify de l'utilisateur.
 3. **Pivots techniques** : Suite à des restrictions imprévues de l'API Deezer à mi-projet, j'ai coordonné le pivot de l'équipe vers une solution axée principalement sur Spotify avec un fallback intelligent.
@@ -45,9 +48,9 @@ En tant que référent technique et développeur full-stack sur ce projet, j'ai 
 
 ## Les lendemains du projet
 
-- *Immédiatement après* : Le projet a reçu une excellente note (18/20) et a été mis en avant par l'école comme exemple de bonne intégration d'APIs tierces.
-- *À distance* : Le code source a servi de référence (template) pour d'autres projets nécessitant de l'OAuth.
-- *Aujourd'hui* : L'application n'est plus maintenue activement (clés d'API expirées), mais les principes architecturaux que j'y ai développés sont ceux que j'applique quotidiennement chez 3F.
+- _Immédiatement après_ : Le projet a reçu une excellente note (18/20) et a été mis en avant par l'école comme exemple de bonne intégration d'APIs tierces.
+- _À distance_ : Le code source a servi de référence (template) pour d'autres projets nécessitant de l'OAuth.
+- _Aujourd'hui_ : L'application n'est plus maintenue activement (clés d'API expirées), mais les principes architecturaux que j'y ai développés sont ceux que j'applique quotidiennement chez 3F.
 
 ## Regard Critique
 

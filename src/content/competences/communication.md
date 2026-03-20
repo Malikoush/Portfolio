@@ -4,44 +4,48 @@ category: humaine
 level: 7
 icon: "💬"
 shortDescription: Collaboration transversale avec les designers, chefs de projet et parties prenantes.
-relatedRealisations: ["letstyle", "spotymike"]
+relatedRealisations:
+  - letstyle
+  - spotymike
+  - digitao
 ---
 
-## Définition
+## Definition
 
-La communication professionnelle en ingénierie désigne la capacité à transmettre une information technique de manière claire, adaptée à son interlocuteur (développeur, designer, manager, client), et à faciliter la collaboration au sein d'équipes pluridisciplinaires. Elle comprend la communication orale (présentations, réunions), écrite (documentation, emails, tickets) et non verbale (écoute active, reformulation).
+La communication professionnelle en ingenierie designe la capacite a transmettre une information technique de maniere claire, adaptee a son interlocuteur, et a faciliter la collaboration au sein d'equipes pluridisciplinaires.
 
-Dans le secteur numérique, la communication est un levier crucial : un ingénieur qui sait expliquer ses choix techniques à un non-technicien crée de la valeur bien au-delà de son code.
+Dans le secteur numerique, la communication est un levier crucial : un ingenieur qui sait expliquer ses choix techniques a un non-technicien cree de la valeur bien au-dela de son code.
 
-## Éléments de preuve
+## Elements de preuve
 
-### Collaboration avec les designers chez 3F
+### Communication metier sur Digitao
 
-Dans le cadre de la refonte de modules internes chez 3F, j'ai travaillé en étroite collaboration avec les designers UX. J'ai appris à traduire les maquettes Figma en code, à remonter les contraintes techniques de manière constructive, et à proposer des alternatives réalistes lorsque certains designs n'étaient pas techniquement réalisables dans les délais.
+Sur Digitao, j'ai travaille avec des utilisateurs metier et des interlocuteurs internes autour de sujets fonctionnels parfois sensibles : appels d'offres, commissions, validation des ecrans et recette utilisateur. Cela m'a oblige a reformuler clairement les choix techniques et a transformer les retours metier en actions concretes.
 
-**Résultat** : Les interfaces livrées ont fidèlement respecté les maquettes tout en intégrant des optimisations de performance. La relation de confiance établie avec l'équipe design a permis d'accélérer les cycles de validation.
+**Resultat** : des echanges plus efficaces entre les besoins operationnels et la mise en oeuvre technique, avec une meilleure prise en compte des attentes utilisateurs.
 
-### Présentation du projet Let'Style
+→ *Voir la realisation [Digitao](/realisations/digitao)*
 
-Lors de la soutenance du projet Let'Style, j'ai présenté l'architecture technique et les choix de conception à un jury composé de professionnels et d'enseignants. J'ai adapté mon discours pour être compris de tous, sans jargon excessif.
+### Presentation du projet Let'Style
 
-**Résultat** : Le jury a salué la clarté de la présentation et la cohérence entre vision produit et réalisation technique.
+Lors de la soutenance du projet Let'Style, j'ai presente l'architecture technique et les choix de conception a un jury compose de professionnels et d'enseignants.
 
-→ *Voir la réalisation [Let'Style](/realisations/letstyle)*
+**Resultat** : le jury a salue la clarte de la presentation et la coherence entre vision produit et realisation technique.
+
+→ *Voir la realisation [Let'Style](/realisations/letstyle)*
 
 ## Autocritique
 
-Mon niveau de communication est de 7/10. Les situations où je dois m'améliorer sont les communications de crise (annoncer un retard, gérer un désaccord ouvert) et la prise de parole en grand public.
+Mon niveau de communication est de 7/10. Les situations ou je dois m'ameliorer concernent surtout les communications de crise et la prise de parole en grand public.
 
-Ma communication est plus efficace dans les petits groupes (2 à 10 personnes) que dans les grandes assemblées. Je travaille à développer un discours plus structuré et percutant pour les interventions formelles.
+Ma communication est plus efficace dans les petits groupes que dans les grandes assemblees. Je travaille a developper un discours plus structure et percutant pour les interventions formelles.
 
-Conseil avec l'expérience : avant toute réunion technique, écrire une ou deux phrases résumant le message clé à faire passer — cela clarifie les idées et le discours.
+## Evolution
 
-## Évolution
+Je souhaite developper ma communication a travers des experiences de mentorat ou d'animation de workshops techniques. Je me forme actuellement a la vulgarisation via la redaction d'articles techniques.
 
-Je souhaite développer ma communication à travers des expériences de mentorat ou d'animation de workshops techniques. Je m'autoformé actuellement sur la vulgarisation via la rédaction d'articles techniques, ce qui renforce ma capacité à structurer un discours.
+## Realisations rattachees
 
-## Réalisations rattachées
-
-- [Let'Style — Plateforme de personnalisation vestimentaire](/realisations/letstyle)
-- [SpotyMike — Application musicale intelligente](/realisations/spotymike)
+- [Let'Style - Plateforme de personnalisation vestimentaire](/realisations/letstyle)
+- [SpotyMike - Application musicale intelligente](/realisations/spotymike)
+- [Digitao - Plateforme de gestion des appels d'offres immobiliers](/realisations/digitao)

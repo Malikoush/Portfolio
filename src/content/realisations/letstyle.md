@@ -1,7 +1,7 @@
 ---
 title: Let'Style
 description: Plateforme web de personnalisation vestimentaire avec gestion utilisateur et boutique.
-img: /assets/stock-2.jpg
+img: /assets/IMG-8413.jpg
 img_alt: Interface de Let'Style montrant la personnalisation de vêtements
 date: 2023-11-20
 tags:
@@ -9,7 +9,13 @@ tags:
   - PHP
   - SQL
   - E-commerce
-relatedCompetences: ["developpement-web", "modelisation-uml", "securite-applicative", "bases-de-donnees"]
+relatedCompetences:
+  [
+    "developpement-web",
+    "modelisation-uml",
+    "securite-applicative",
+    "bases-de-donnees",
+  ]
 ---
 
 ## Présentation du projet
@@ -21,12 +27,14 @@ Let'Style est une application web e-commerce dédiée à la mode sur mesure. Ell
 **Contexte** : Projet académique majeur visant à synthétiser les apprentissages en développement web full-stack, modélisation de bases de données et sécurité.
 **Objectif client (simulé)** : Disposer d'une plateforme robuste capable de gérer un catalogue de produits modulables, des paniers d'achat et des commandes sécurisées.
 **Enjeux / Risques** :
-- *Techniques* : Complexité du modèle de base de données pour gérer des produits "configurables" plutôt que des produits simples.
-- *Sécurité* : Protection des données personnelles des utilisateurs et sécurisation des processus d'authentification.
+
+- _Techniques_ : Complexité du modèle de base de données pour gérer des produits "configurables" plutôt que des produits simples.
+- _Sécurité_ : Protection des données personnelles des utilisateurs et sécurisation des processus d'authentification.
 
 ## Étapes de réalisation (Ce que j'ai fait)
 
 J'ai participé à la construction de l'application de A à Z :
+
 1. **Modélisation** : Création du dossier d'architecture (UML) et définition du schéma entité-relation pour supporter la logique de personnalisation.
 2. **Backend sécurisé** : Développement d'une API REST maison (PHP) avec authentification par token JWT et contrôle d'accès basé sur les rôles (RBAC).
 3. **Logique métier** : Implémentation de la gestion des paniers, de la conversion de configurations vestimentaires en commandes, et du calcul dynamique des prix.
@@ -44,9 +52,9 @@ J'ai participé à la construction de l'application de A à Z :
 
 ## Les lendemains du projet
 
-- *Immédiatement après* : Le projet a validé des modules critiques de ma formation en développement et en base de données.
-- *À distance* : Le référentiel GitHub du projet est devenu mon portfolio technique principal lors de mes recherches d'alternance.
-- *Aujourd'hui* : Ce projet a été le tremplin qui m'a permis de décrocher mon poste actuel chez 3F, les recruteurs ayant été convaincus par la rigueur de l'architecture.
+- _Immédiatement après_ : Le projet a validé des modules critiques de ma formation en développement et en base de données.
+- _À distance_ : Le référentiel GitHub du projet est devenu mon portfolio technique principal lors de mes recherches d'alternance.
+- _Aujourd'hui_ : Ce projet a été le tremplin qui m'a permis de décrocher mon poste actuel chez 3F, les recruteurs ayant été convaincus par la rigueur de l'architecture.
 
 ## Regard Critique
 

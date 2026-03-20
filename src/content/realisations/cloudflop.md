@@ -1,14 +1,15 @@
 ---
 title: CloudFlop
 description: Application de stockage cloud sécurisée avec chiffrement côté client.
-img: /assets/stock-3.jpg
+img: /assets/IMG_cloudf.png
 img_alt: Interface de l'application CloudFlop
 date: 2024-10-10
 tags:
   - Sécurité
   - Cryptographie
   - P2P
-relatedCompetences: ["securite-applicative", "tests-debogage", "bases-de-donnees"]
+relatedCompetences:
+  ["securite-applicative", "tests-debogage", "bases-de-donnees"]
 ---
 
 ## Présentation du projet
@@ -20,9 +21,10 @@ CloudFlop est une plateforme expérimentale de stockage de fichiers dans le clou
 **Contexte** : Projet de spécialisation en sécurité des systèmes d'information.
 **Objectif client** : Développer une alternative auto-hébergeable aux solutions cloud grand public, garantissant que même un administrateur système compromis ne puisse accéder aux données.
 **Enjeux / Risques** :
-- *Techniques* : Maîtriser les primitives cryptographiques (AES, PBKDF2) sans créer de failles par une mauvaise implémentation maison.
-- *Performance* : Le chiffrement côté client via JavaScript/WebCrypto API au sein du navigateur impacte les performances pour les fichiers volumineux.
-- *Risque UX* : La sécurité absolue implique l'absence de procédure logicielle de "mot de passe oublié" (la perte de la clé = perte des données). Résoudre le défi pédagogique de le faire accepter à l'utilisateur.
+
+- _Techniques_ : Maîtriser les primitives cryptographiques (AES, PBKDF2) sans créer de failles par une mauvaise implémentation maison.
+- _Performance_ : Le chiffrement côté client via JavaScript/WebCrypto API au sein du navigateur impacte les performances pour les fichiers volumineux.
+- _Risque UX_ : La sécurité absolue implique l'absence de procédure logicielle de "mot de passe oublié" (la perte de la clé = perte des données). Résoudre le défi pédagogique de le faire accepter à l'utilisateur.
 
 ## Étapes de réalisation (Ce que j'ai fait)
 
@@ -43,9 +45,9 @@ CloudFlop est une plateforme expérimentale de stockage de fichiers dans le clou
 
 ## Les lendemains du projet
 
-- *Immédiatement après* : Le projet a fait l'objet d'une analyse de vulnérabilité où aucune faille conceptuelle grave n'a été détectée.
-- *À distance* : J'ai réutilisé les briques cryptographiques développées ici pour sécuriser ponctuellement des données sensibles dans des projets ultérieurs.
-- *Aujourd'hui* : S'agissant d'un projet "Proof of Concept" académique, il n'a pas vocation à être commercialisé, mais sert de démonstration forte de mes compétences en sécurité.
+- _Immédiatement après_ : Le projet a fait l'objet d'une analyse de vulnérabilité où aucune faille conceptuelle grave n'a été détectée.
+- _À distance_ : J'ai réutilisé les briques cryptographiques développées ici pour sécuriser ponctuellement des données sensibles dans des projets ultérieurs.
+- _Aujourd'hui_ : S'agissant d'un projet "Proof of Concept" académique, il n'a pas vocation à être commercialisé, mais sert de démonstration forte de mes compétences en sécurité.
 
 ## Regard Critique
 

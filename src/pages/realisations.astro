@@ -1,37 +1,37 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import ContactCTA from '../components/ContactCTA.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
-import Hero from '../components/Hero.astro';
-import Grid from '../components/Grid.astro';
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import PortfolioPreview from "../components/PortfolioPreview.astro";
+import Hero from "../components/Hero.astro";
+import Grid from "../components/Grid.astro";
 
-const projects = (await getCollection('realisations')).sort(
-	(a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+const projects = (await getCollection("realisations")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 ---
 
 <BaseLayout
-	title="Mes Réalisations | Martin OUEDRAOGO"
-	description="Découvrez mes principaux projets de développement"
+  title="Mes Réalisations | Martin OUEDRAOGO"
+  description="Découvrez mes principaux projets de développement"
 >
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="Mes Réalisations"
-				tagline="Une sélection de projets académiques et personnels démontrant ma capacité à concevoir et livrer des solutions logicielles concrètes."
-				align="start"
-			/>
-			<Grid variant="offset">
-				{
-					projects.map((project) => (
-						<li>
-							<PortfolioPreview project={project} base="/realisations" />
-						</li>
-					))
-				}
-			</Grid>
-		</main>
-		<ContactCTA />
-	</div>
+  <div class="stack gap-20">
+    <main class="wrapper stack gap-8">
+      <Hero
+        title="Mes Réalisations"
+        tagline="Une sélection de projets académiques et personnels démontrant ma capacité à concevoir et livrer des solutions logicielles concrètes."
+        align="start"
+      />
+      <Grid variant="offset">
+        {
+          projects.map((project) => (
+            <li>
+              <PortfolioPreview project={project} base="/realisations" />
+            </li>
+          ))
+        }
+      </Grid>
+    </main>
+    <ContactCTA />
+  </div>
 </BaseLayout>

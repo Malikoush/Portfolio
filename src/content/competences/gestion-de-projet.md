@@ -3,49 +3,49 @@ title: Gestion de projet
 category: humaine
 level: 8
 icon: "📋"
-shortDescription: Coordination des équipes et pilotage des livrables dans un contexte Agile.
-relatedRealisations: ["spotymike", "letstyle"]
+shortDescription: Coordination des equipes et pilotage des livrables dans un contexte Agile.
+relatedRealisations:
+  - spotymike
+  - letstyle
+  - digitao
 ---
 
-## Définition
+## Definition
 
-La gestion de projet est la discipline qui consiste à planifier, organiser, diriger et contrôler les ressources pour atteindre des objectifs définis dans un délai et un budget impartis. Dans le monde du numérique, elle se matérialise souvent par la maîtrise des méthodes Agile (Scrum, Kanban) et des outils collaboratifs (Jira, Notion, Azure DevOps).
+La gestion de projet consiste a planifier, organiser, diriger et controler les ressources pour atteindre des objectifs definis dans un delai et un budget impartis. Dans le monde du numerique, elle se materialise souvent par la maitrise des methodes Agile et des outils collaboratifs.
 
-En entreprise, cette compétence est au cœur de toute réalisation logicielle : elle permet d'éviter les dérives de planning, de maintenir l'alignement des équipes et de livrer de la valeur de manière itérative. À l'ère du travail hybride et des équipes pluridisciplinaires, un ingénieur capable de gérer un projet est un atout différenciant.
+En entreprise, cette competence est au coeur de toute realisation logicielle : elle permet d'eviter les derives de planning, de maintenir l'alignement des equipes et de livrer de la valeur de maniere iterative.
 
-## Éléments de preuve
+## Elements de preuve
 
-### Alternance chez 3F — Coordination de la refonte d'un module interne
+### Digitao - Suivi d'un projet metier en environnement reel
 
-Lors de mon alternance chez 3F, j'ai pris en charge la coordination d'un chantier de refonte d'un module de gestion des demandes locataires. J'ai défini les user stories avec le product owner, découpé les tâches en sprints de deux semaines et animé les daily stand-ups en l'absence du chef de projet.
+Sur Digitao, j'ai participe aux rituels de suivi, a la redaction de specifications fonctionnelles et aux arbitrages techniques. Cette implication m'a place a l'interface entre contraintes metier, logique applicative et priorites projet.
 
-**Résultat** : Le module a été livré dans les délais avec un taux de satisfaction utilisateur de 87 % lors des tests UAT. Ma valeur ajoutée a été de maintenir la cadence malgré deux changements de priorité imposés par la direction, grâce à une backlog priorisée en temps réel.
+**Resultat** : une meilleure fluidite entre les besoins des equipes achats, la mise en oeuvre technique et les phases de validation utilisateur.
 
-→ *Voir la réalisation [Let'Style](/realisations/letstyle) pour un autre exemple de pilotage de projet de bout en bout.*
+→ *Voir la realisation [Digitao](/realisations/digitao)*
 
-### Projet SpotyMike — Chef de projet technique
+### Projet SpotyMike - Chef de projet technique
 
-Sur le projet SpotyMike, j'ai assuré le rôle de référent technique et coordinateur de l'équipe de 4 étudiants. J'ai mis en place un tableau Kanban, défini les conventions de nommage et les revues de code hebdomadaires.
+Sur le projet SpotyMike, j'ai assure le role de referent technique et coordinateur de l'equipe de 4 etudiants.
 
-**Résultat** : Le projet a été rendu dans les délais académiques avec des fonctionnalités complètes et une architecture propre saluée par les évaluateurs.
+**Resultat** : le projet a ete rendu dans les delais academiques avec des fonctionnalites completes et une architecture propre.
 
-→ *Voir la réalisation [SpotyMike](/realisations/spotymike)*
+→ *Voir la realisation [SpotyMike](/realisations/spotymike)*
 
 ## Autocritique
 
-Mon niveau en gestion de projet est solide (8/10) pour les projets de taille petite à moyenne (2 à 8 personnes, 3 à 6 mois). Ma marge de progression porte sur la gestion de projets à grande échelle, notamment la coordination de plusieurs équipes simultanées et la maîtrise des outils avancés (MS Project, gestion budgétaire formelle).
+Mon niveau en gestion de projet est solide (8/10) pour les projets de taille petite a moyenne. Ma marge de progression porte sur la gestion de projets a grande echelle, notamment la coordination de plusieurs equipes simultanees et la maitrise des outils avances.
 
-Cette compétence fonctionne bien dans la majorité des contextes techniques, mais elle est particulièrement efficace quand l'équipe adhère à la culture Agile. Dans un environnement très hiérarchique ou en cycle en V, je dois adapter mon approche.
+Cette competence fonctionne bien dans la majorite des contextes techniques, mais elle est particulierement efficace quand l'equipe adhere a une culture Agile.
 
-Dans mon profil d'Expert en Ingénierie du Développement, la gestion de projet est une compétence transverse prioritaire : elle rend les compétences techniques plus impactantes en les orientant vers des objectifs concrets. Avec l'expérience, je conseille de ne jamais sous-estimer le temps de communication : une heure gagnée en coordination peut valoir plusieurs heures de développement.
+## Evolution
 
-## Évolution
+A moyen terme, je vise la certification PSM I pour formaliser ma pratique Agile. Dans mon projet professionnel, j'ambitionne de prendre des responsabilites de tech lead ou de chef de projet technique sur des projets d'envergure nationale.
 
-À moyen terme, je vise la certification **PSM I (Professional Scrum Master)** pour formaliser ma pratique Agile. Dans mon projet professionnel, j'ambitionne de prendre des responsabilités de tech lead ou de chef de projet technique sur des projets d'envergure nationale.
+## Realisations rattachees
 
-Je suis actuellement en formation continue sur les pratiques DevOps (pipeline CI/CD, infrastructure as code) qui complètent directement la gestion de projet moderne.
-
-## Réalisations rattachées
-
-- [SpotyMike — Application musicale intelligente](/realisations/spotymike)
-- [Let'Style — Plateforme de personnalisation vestimentaire](/realisations/letstyle)
+- [SpotyMike - Application musicale intelligente](/realisations/spotymike)
+- [Let'Style - Plateforme de personnalisation vestimentaire](/realisations/letstyle)
+- [Digitao - Plateforme de gestion des appels d'offres immobiliers](/realisations/digitao)

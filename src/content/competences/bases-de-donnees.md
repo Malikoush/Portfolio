@@ -1,45 +1,57 @@
 ---
-title: Base de données
+title: Bases de donnees
 category: technique
 level: 8
 icon: "🗄️"
-shortDescription: Conception, requêtage et optimisation de bases de données relationnelles (SQL, Oracle, SQLite).
-relatedRealisations: ["letstyle", "cloudflop"]
+shortDescription: Conception, requetage et optimisation de bases de donnees relationnelles (SQL, Oracle, SQLite).
+relatedRealisations:
+  - letstyle
+  - cloudflop
+  - digitao
 ---
 
-## Définition
+## Definition
 
-La compétence en bases de données couvre la modélisation des données (MCD, MLD, diagrammes entité-relation), la conception de schémas relationnels, l'écriture de requêtes SQL optimisées, et la gestion des contraintes d'intégrité. Elle inclut aussi la sécurisation des accès, la gestion des transactions (ACID) et les fondamentaux de performance (indexation, plans d'exécution).
+La competence en bases de donnees couvre la modelisation des donnees, la conception de schemas relationnels, l'ecriture de requetes SQL optimisees et la gestion des contraintes d'integrite. Elle inclut aussi la securisation des acces, la gestion des transactions et les fondamentaux de performance.
 
-Dans l'industrie logicielle, une mauvaise conception de base de données est l'une des sources les plus coûteuses de dette technique. Un ingénieur qui comprend les données à la fois comme un développeur et comme un administrateur est un profil rare et très recherché.
+Dans l'industrie logicielle, une mauvaise conception de base de donnees est l'une des sources les plus couteuses de dette technique. Un ingenieur qui comprend les donnees a la fois comme un developpeur et comme un administrateur est un profil rare et tres recherche.
 
-## Éléments de preuve
+## Elements de preuve
 
 ### Base Oracle volumineuse chez 3F
 
-Chez 3F, je travaille quotidiennement avec une base Oracle de plusieurs dizaines de tables métier (gestion locative, facturation, interventions). J'ai écrit des requêtes complexes (sous-requêtes corrélées, CTEs, fenêtrage) et optimisé plusieurs procédures stockées qui causaient des timeouts.
+Chez 3F, je travaille quotidiennement avec une base Oracle de plusieurs dizaines de tables metier. J'ai ecrit des requetes complexes et optimise plusieurs traitements qui causaient des timeouts.
 
-**Résultat** : Une procédure critique de calcul des loyers a vu son temps d'exécution passer de 45 secondes à 3 secondes après analyse du plan et ajout d'index composites. Cela a supprimé des incidents de production récurrents.
+**Resultat** : une procedure critique de calcul a vu son temps d'execution passer de 45 secondes a 3 secondes apres analyse du plan et ajout d'index composites.
 
-### CloudFlop — Modélisation des métadonnées chiffrées
+### Digitao - Modelisation des flux d'achat
 
-Sur le projet CloudFlop, j'ai conçu la structure de données pour stocker les métadonnées des fichiers tout en garantissant que les données sensibles ne sont jamais stockées en clair. La base SQLite locale gère les index de fichiers, les permissions et les clés dérivées côté client.
+Sur Digitao, j'ai participe a la conception et a l'evolution du schema Oracle pour representer des appels d'offres ouverts et restreints, les commissions, les etapes d'edition et les differents flux d'achat.
 
-**Résultat** : Architecture de données robuste, validée lors d'une revue de sécurité par notre référent ESIEA. Aucune donnée sensible exposée en base.
+**Resultat** : une base plus coherente avec le fonctionnement metier, capable de soutenir un processus fiable et tracable dans le temps.
 
-→ *Voir la réalisation [CloudFlop](/realisations/cloudflop)*
+→ *Voir la realisation [Digitao](/realisations/digitao)*
+
+### CloudFlop - Modelisation des metadonnees chiffrees
+
+Sur le projet CloudFlop, j'ai concu la structure de donnees pour stocker les metadonnees des fichiers tout en garantissant que les donnees sensibles ne sont jamais stockees en clair.
+
+**Resultat** : architecture de donnees robuste, validee lors d'une revue de securite.
+
+→ *Voir la realisation [CloudFlop](/realisations/cloudflop)*
 
 ## Autocritique
 
-Mon niveau est de 8/10 pour les bases relationnelles SQL. Ma progression porte sur les bases NoSQL (MongoDB, Redis) et les architectures Event Sourcing / CQRS. Je tends à naturellement penser "relationnel" face à un problème de données, ce qui peut être une limite quand un modèle documentaire ou graphe serait plus adapté.
+Mon niveau est de 8/10 pour les bases relationnelles SQL. Ma progression porte sur les bases NoSQL et les architectures distribuees. Je tends naturellement a penser relationnel face a un probleme de donnees, ce qui peut etre une limite dans certains contextes.
 
-Cette compétence fonctionne dans tous les contextes, mais nécessite de bien connaître le SGBD utilisé — Oracle et PostgreSQL ont des comportements très différents en termes de performance et de syntaxe.
+Cette competence fonctionne dans tous les contextes, mais necessite de bien connaitre le SGBD utilise : Oracle et PostgreSQL ont des comportements tres differents en termes de performance et de syntaxe.
 
-## Évolution
+## Evolution
 
-Je souhaite approfondir les bases de données distribués et le cloud data (Azure SQL, Cosmos DB). Je prévois de suivre une formation spécialisée sur l'optimisation Oracle dans le cadre de mon alternance chez 3F.
+Je souhaite approfondir les bases de donnees distribuees et le cloud data. Je prevois de suivre une formation specialisee sur l'optimisation Oracle dans le cadre de mon alternance chez 3F.
 
-## Réalisations rattachées
+## Realisations rattachees
 
-- [CloudFlop — Application de stockage cloud sécurisée](/realisations/cloudflop)
-- [Let'Style — Plateforme de personnalisation vestimentaire](/realisations/letstyle)
+- [CloudFlop - Application de stockage cloud securisee](/realisations/cloudflop)
+- [Let'Style - Plateforme de personnalisation vestimentaire](/realisations/letstyle)
+- [Digitao - Plateforme de gestion des appels d'offres immobiliers](/realisations/digitao)

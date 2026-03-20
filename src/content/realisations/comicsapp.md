@@ -1,7 +1,7 @@
 ---
 title: ComicsApp
 description: Application mobile de lecture et classement de bandes dessinées.
-img: /assets/stock-4.jpg
+img: /assets/IMG_comics.png
 img_alt: Capture d'écran de l'application mobile ComicsApp
 date: 2023-04-10
 tags:
@@ -20,8 +20,9 @@ ComicsApp est une application mobile cross-platform (iOS/Android) dédiée aux p
 **Contexte** : Projet personnel initié pour découvrir le développement mobile hybride.
 **Objectif client (moi-même)** : Disposer d'une application fluide et esthétique remplaçant mon fichier Excel de suivi de lecture.
 **Enjeux / Risques** :
-- *Techniques* : Comprendre le cycle de vie des composants React Native et gérer l'état global de l'application (Redux, Zustand).
-- *Performance* : Assurer un défilement fluide (60 fps) sur des listes contenant des centaines de couvertures d'albums en haute résolution.
+
+- _Techniques_ : Comprendre le cycle de vie des composants React Native et gérer l'état global de l'application (Redux, Zustand).
+- _Performance_ : Assurer un défilement fluide (60 fps) sur des listes contenant des centaines de couvertures d'albums en haute résolution.
 
 ## Étapes de réalisation (Ce que j'ai fait)
 
@@ -42,9 +43,9 @@ ComicsApp est une application mobile cross-platform (iOS/Android) dédiée aux p
 
 ## Les lendemains du projet
 
-- *Immédiatement après* : Déploiement d'une version bêta via TestFlight (iOS) et APK (Android) pour mon cercle proche.
-- *À distance* : Le projet a été présenté lors de mes entretiens de recrutement, démontrant ma curiosité technique hors cursus scolaire.
-- *Aujourd'hui* : Je continue d'utiliser l'application personnellement, et je prévois une migration vers Expo Router pour le système de navigation.
+- _Immédiatement après_ : Déploiement d'une version bêta via TestFlight (iOS) et APK (Android) pour mon cercle proche.
+- _À distance_ : Le projet a été présenté lors de mes entretiens de recrutement, démontrant ma curiosité technique hors cursus scolaire.
+- _Aujourd'hui_ : Je continue d'utiliser l'application personnellement, et je prévois une migration vers Expo Router pour le système de navigation.
 
 ## Regard Critique
 
@@ -53,6 +54,6 @@ ComicsApp est une application mobile cross-platform (iOS/Android) dédiée aux p
 
 ## Compétences rattachées
 
-- [Développement Web](/competences/developpement-web) *(Transfert des compétences JS au mobile)*
+- [Développement Web](/competences/developpement-web) _(Transfert des compétences JS au mobile)_
 - [Design & UX](/competences/design-ux)
 - [API & Intégration](/competences/api-integration)
