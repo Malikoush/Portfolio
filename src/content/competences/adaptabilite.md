@@ -19,9 +19,9 @@ Dans un monde numerique ou les technologies evoluent vite, l'adaptabilite n'est 
 
 ### Integration chez 3F - Stack technique inconnue
 
-En arrivant chez 3F, j'ai decouvert un environnement technique specifique : des applications PHP legacy, une base Oracle volumineuse, et des processus internes tres codifies. En moins de trois semaines, j'avais pris en main l'environnement, contribue aux premieres corrections de bugs et propose une amelioration sur un formulaire critique.
+En arrivant chez 3F, j'ai découvert un environnement technique spécifique : des applications PHP legacy, une base Oracle volumineuse, et des processus internes très codifiés. Sur le projet interne <strong>Access-IT</strong>, porté par la DSI, j'ai appris à m'adapter à des demandes parfois peu cadrées, en adoptant une posture agile : reformuler le besoin, proposer des pistes et itérer avec les parties prenantes plutôt qu'attendre une spec complète.
 
-**Resultat** : mon integration technique a ete plus rapide que prevu et m'a permis de prendre des taches autonomes tres tot.
+**Resultat** : cette capacité d'adaptation m'a permis de contribuer concrètement au projet malgré l'ambiguïté de certaines demandes, et de gagner progressivement en autonomie sur des tâches de développement réelles.
 
 ### Digitao - Prise en main d'un projet metier complexe
 
@@ -29,7 +29,7 @@ Le projet Digitao m'a confronte a un domaine tres structure : appels d'offres, c
 
 **Resultat** : j'ai pu contribuer utilement sur le code, les specifications et la recette, avec une posture plus transverse que celle d'un simple developpeur executant.
 
-→ *Voir la realisation [Digitao](/realisations/digitao)*
+→ _Voir la realisation [Digitao](/realisations/digitao)_
 
 ## Autocritique
 
@@ -40,8 +40,3 @@ Cette competence fonctionne bien dans tous les contextes, mais elle est encore p
 ## Evolution
 
 Je continue de cultiver cette competence en explorant de nouveaux paradigmes en dehors de mes projets professionnels. Mon objectif est de devenir un ingenieur full-stack au sens large, capable de prendre en main n'importe quelle partie d'un systeme.
-
-## Realisations rattachees
-
-- [CloudFlop - Application de stockage cloud securisee](/realisations/cloudflop)
-- [Digitao - Plateforme de gestion des appels d'offres immobiliers](/realisations/digitao)

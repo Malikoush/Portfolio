@@ -1,228 +1,232 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
-import Icon from '../components/Icon.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+import Icon from "../components/Icon.astro";
 
 // Data statique pour le parcours (anti-chronologique)
 const experiences = [
-	{
-		id: 'exp-1',
-		type: 'entreprise',
-		period: '2024 – Présent',
-		title: 'Concepteur-Développeur Web (Alternance)',
-		location: '3F',
-		logo: 'building',
-		details: [
-			'Développement et maintenance d\'applications internes (PHP, JavaScript, SQL).',
-			'Participation active aux rituels Agiles et aux sprints.',
-			'Refonte d\'un module métier critique avec optimisation forte des performances BDD.',
-		]
-	},
-	{
-		id: 'edu-1',
-		type: 'formation',
-		period: '2023 – 2026',
-		title: 'Mastère Expert en Ingénierie du Développement d\'Applications',
-		location: 'ESIEA (École d\'ingénieurs du monde numérique)',
-		logo: 'graduation-cap',
-		details: [
-			'Actuellement en 2ème année (alternance).',
-			'Spécialisation en architecture logicielle, bases de données avancées, et cybersécurité applicative.',
-			'Mise en pratique approfondie des méthodes de gestion de projet (Scrum).',
-		]
-	},
-	{
-		id: 'edu-2',
-		type: 'formation',
-		period: '2021 – 2023',
-		title: 'Cycle Préparatoire / Bachelor Numérique',
-		location: 'ESIEA',
-		logo: 'student',
-		details: [
-			'Acquisition des fondamentaux en algorithmique, C#, programmation orientée objet.',
-			'Apprentissage du développement web front-end et back-end.',
-		]
-	}
+  {
+    id: "exp-1",
+    type: "entreprise",
+    period: "2024 – Présent",
+    title: "Concepteur-Développeur Web (Alternance)",
+    location: "3F",
+    logo: "building",
+    details: [
+      "Développement et maintenance d'applications internes (PHP, JavaScript, SQL).",
+      "Participation à la rédaction de spécifications fonctionnelles, aux sessions de recette utilisateur et au suivi des livraisons.",
+      "Contribution au développement de modules métier et à l'optimisation de requêtes Oracle.",
+    ],
+  },
+  {
+    id: "edu-1",
+    type: "formation",
+    period: "2023 – 2026",
+    title: "Mastère Expert en Ingénierie du Développement d'Applications",
+    location: "ESIEA (École d'ingénieurs du monde numérique)",
+    logo: "graduation-cap",
+    details: [
+      "Actuellement en 2ème année (alternance).",
+      "Spécialisation en architecture logicielle, bases de données avancées, et cybersécurité applicative.",
+      "Mise en pratique approfondie des méthodes de gestion de projet (Scrum).",
+    ],
+  },
+  {
+    id: "edu-2",
+    type: "formation",
+    period: "2021 – 2023",
+    title: "Cycle Préparatoire / Bachelor Numérique",
+    location: "ESIEA",
+    logo: "student",
+    details: [
+      "Acquisition des fondamentaux en algorithmique, C#, programmation orientée objet.",
+      "Apprentissage du développement web front-end et back-end.",
+    ],
+  },
 ];
 ---
 
 <BaseLayout
-	title="Mon Parcours | Martin OUEDRAOGO"
-	description="Expériences professionnelles et formations professionnelles"
+  title="Mon Parcours | Martin OUEDRAOGO"
+  description="Expériences professionnelles et formations professionnelles"
 >
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="Mon Parcours"
-				tagline="Une succession logique d'apprentissages théoriques et d'applications concrètes en entreprise."
-				align="start"
-			/>
-			
-			<div class="timeline-container">
-				{experiences.map((item, index) => (
-					<div class={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
-						<div class="timeline-dot">
-							<Icon icon={item.logo as any} size="1.5rem" />
-						</div>
-						<div class="timeline-content box">
-							<span class="period">{item.period}</span>
-							<h3 class="title">{item.title}</h3>
-							<h4 class="location">{item.location}</h4>
-							
-							<div class="details-section">
-								<ul>
-									{item.details.map((detail) => (
-										<li>{detail}</li>
-									))}
-								</ul>
-							</div>
-						</div>
-					</div>
-				))}
-			</div>
-		</main>
-		<ContactCTA />
-	</div>
+  <div class="stack gap-20">
+    <main class="wrapper stack gap-8">
+      <Hero
+        title="Mon Parcours"
+        tagline="Une succession logique d'apprentissages théoriques et d'applications concrètes en entreprise."
+        align="start"
+      />
+
+      <div class="timeline-container">
+        {
+          experiences.map((item, index) => (
+            <div class={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}>
+              <div class="timeline-dot">
+                <Icon icon={item.logo as any} size="1.5rem" />
+              </div>
+              <div class="timeline-content box">
+                <span class="period">{item.period}</span>
+                <h3 class="title">{item.title}</h3>
+                <h4 class="location">{item.location}</h4>
+
+                <div class="details-section">
+                  <ul>
+                    {item.details.map((detail) => (
+                      <li>{detail}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </main>
+    <ContactCTA />
+  </div>
 </BaseLayout>
 
 <style>
-	.timeline-container {
-		position: relative;
-		max-width: 1000px;
-		margin: 4rem auto;
-		padding: 2rem 0;
-	}
+  .timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 2rem 0;
+  }
 
-	/* The vertical line */
-	.timeline-container::after {
-		content: '';
-		position: absolute;
-		width: 4px;
-		background: var(--gradient-accent);
-		top: 0;
-		bottom: 0;
-		left: 2rem;
-		margin-left: -2px;
-		border-radius: 4px;
-	}
+  /* The vertical line */
+  .timeline-container::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background: var(--gradient-accent);
+    top: 0;
+    bottom: 0;
+    left: 2rem;
+    margin-left: -2px;
+    border-radius: 4px;
+  }
 
-	.timeline-item {
-		padding: 1rem 0 3rem 4rem;
-		position: relative;
-		width: 100%;
-	}
+  .timeline-item {
+    padding: 1rem 0 3rem 4rem;
+    position: relative;
+    width: 100%;
+  }
 
-	.timeline-dot {
-		position: absolute;
-		width: 3rem;
-		height: 3rem;
-		left: 0.5rem;
-		top: 1.5rem;
-		background-color: var(--gray-999);
-		border: 4px solid var(--accent-regular);
-		border-radius: 50%;
-		z-index: 1;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: var(--accent-regular);
-	}
+  .timeline-dot {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    left: 0.5rem;
+    top: 1.5rem;
+    background-color: var(--gray-999);
+    border: 4px solid var(--accent-regular);
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-regular);
+  }
 
-	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		padding: 2rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
-		transition: transform var(--theme-transition), box-shadow var(--theme-transition);
-	}
+  .box {
+    border: 1px solid var(--gray-800);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    background-color: var(--gray-999_40);
+    box-shadow: var(--shadow-sm);
+    transition:
+      transform var(--theme-transition),
+      box-shadow var(--theme-transition);
+  }
 
-	.box:hover {
-		transform: translateY(-5px);
-		box-shadow: var(--shadow-md);
-		border-color: var(--accent-regular);
-	}
+  .box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-regular);
+  }
 
-	.period {
-		display: inline-block;
-		padding: 0.4rem 1rem;
-		background-color: var(--accent-regular);
-		color: var(--accent-text-over);
-		border-radius: 999rem;
-		font-weight: bold;
-		font-size: var(--text-sm);
-		margin-bottom: 1rem;
-	}
+  .period {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background-color: var(--accent-regular);
+    color: var(--accent-text-over);
+    border-radius: 999rem;
+    font-weight: bold;
+    font-size: var(--text-sm);
+    margin-bottom: 1rem;
+  }
 
-	.title {
-		font-size: var(--text-xl);
-		color: var(--gray-100);
-		margin-bottom: 0.5rem;
-	}
+  .title {
+    font-size: var(--text-xl);
+    color: var(--gray-100);
+    margin-bottom: 0.5rem;
+  }
 
-	.location {
-		font-size: var(--text-md);
-		color: var(--accent-regular);
-		margin-bottom: 1.5rem;
-		font-weight: 500;
-	}
+  .location {
+    font-size: var(--text-md);
+    color: var(--accent-regular);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
 
-	.details-section {
-		border-top: 1px solid var(--gray-800);
-		padding-top: 1.5rem;
-	}
+  .details-section {
+    border-top: 1px solid var(--gray-800);
+    padding-top: 1.5rem;
+  }
 
-	.details-section ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
-	}
+  .details-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 
-	.details-section li {
-		position: relative;
-		padding-left: 1.5rem;
-		color: var(--gray-300);
-		font-size: var(--text-md);
-		line-height: 1.5;
-	}
+  .details-section li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--gray-300);
+    font-size: var(--text-md);
+    line-height: 1.5;
+  }
 
-	.details-section li::before {
-		content: '▹';
-		position: absolute;
-		left: 0;
-		color: var(--accent-regular);
-	}
+  .details-section li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent-regular);
+  }
 
-	@media (min-width: 50em) {
-		.timeline-container::after {
-			left: 50%;
-		}
+  @media (min-width: 50em) {
+    .timeline-container::after {
+      left: 50%;
+    }
 
-		.timeline-item {
-			width: 50%;
-			padding: 1rem 3rem 3rem 3rem;
-		}
+    .timeline-item {
+      width: 50%;
+      padding: 1rem 3rem 3rem 3rem;
+    }
 
-		.timeline-item.left {
-			left: 0;
-		}
+    .timeline-item.left {
+      left: 0;
+    }
 
-		.timeline-item.right {
-			left: 50%;
-			padding: 1rem 3rem 3rem 3rem;
-		}
+    .timeline-item.right {
+      left: 50%;
+      padding: 1rem 3rem 3rem 3rem;
+    }
 
-		.timeline-item.left .timeline-dot {
-			left: auto;
-			right: -1.5rem;
-		}
+    .timeline-item.left .timeline-dot {
+      left: auto;
+      right: -1.5rem;
+    }
 
-		.timeline-item.right .timeline-dot {
-			left: -1.5rem;
-		}
-	}
+    .timeline-item.right .timeline-dot {
+      left: -1.5rem;
+    }
+  }
 </style>

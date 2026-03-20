@@ -24,7 +24,7 @@ Sur Digitao, j'ai travaille avec des utilisateurs metier et des interlocuteurs i
 
 **Resultat** : des echanges plus efficaces entre les besoins operationnels et la mise en oeuvre technique, avec une meilleure prise en compte des attentes utilisateurs.
 
-→ *Voir la realisation [Digitao](/realisations/digitao)*
+→ _Voir la realisation [Digitao](/realisations/digitao)_
 
 ### Presentation du projet Let'Style
 
@@ -32,7 +32,7 @@ Lors de la soutenance du projet Let'Style, j'ai presente l'architecture techniqu
 
 **Resultat** : le jury a salue la clarte de la presentation et la coherence entre vision produit et realisation technique.
 
-→ *Voir la realisation [Let'Style](/realisations/letstyle)*
+→ _Voir la realisation [Let'Style](/realisations/letstyle)_
 
 ## Autocritique
 
@@ -43,9 +43,3 @@ Ma communication est plus efficace dans les petits groupes que dans les grandes 
 ## Evolution
 
 Je souhaite developper ma communication a travers des experiences de mentorat ou d'animation de workshops techniques. Je me forme actuellement a la vulgarisation via la redaction d'articles techniques.
-
-## Realisations rattachees
-
-- [Let'Style - Plateforme de personnalisation vestimentaire](/realisations/letstyle)
-- [SpotyMike - Application musicale intelligente](/realisations/spotymike)
-- [Digitao - Plateforme de gestion des appels d'offres immobiliers](/realisations/digitao)

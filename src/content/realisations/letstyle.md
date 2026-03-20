@@ -20,7 +20,7 @@ relatedCompetences:
 
 ## Présentation du projet
 
-Let'Style est une application web e-commerce dédiée à la mode sur mesure. Elle offre aux utilisateurs la possibilité de créer des tenues personnalisées (choix des coupes, couleurs, motifs), de les visualiser en temps réel, de les sauvegarder dans un profil utilisateur et de les commander via une boutique intégrée.
+Let'Style est une application web e-commerce dédiée à la mode sur mesure et inclusive. Elle offre aux utilisateurs la possibilité de créer des tenues personnalisées (choix des couleurs et motifs), adaptées à toutes les morphologies, de les visualiser, de les sauvegarder dans un profil utilisateur et de les commander via une boutique intégrée.
 
 ## Objectifs, Contexte et Enjeux
 
@@ -28,7 +28,7 @@ Let'Style est une application web e-commerce dédiée à la mode sur mesure. Ell
 **Objectif client (simulé)** : Disposer d'une plateforme robuste capable de gérer un catalogue de produits modulables, des paniers d'achat et des commandes sécurisées.
 **Enjeux / Risques** :
 
-- _Techniques_ : Complexité du modèle de base de données pour gérer des produits "configurables" plutôt que des produits simples.
+- _Techniques_ : Sécurisation d'une application e-commerce impliquant une authentification robuste par token JWT, un contrôle d'accès par rôles (RBAC) et la protection des données personnelles tout au long du tunnel d'achat.
 - _Sécurité_ : Protection des données personnelles des utilisateurs et sécurisation des processus d'authentification.
 
 ## Étapes de réalisation (Ce que j'ai fait)
@@ -54,16 +54,9 @@ J'ai participé à la construction de l'application de A à Z :
 
 - _Immédiatement après_ : Le projet a validé des modules critiques de ma formation en développement et en base de données.
 - _À distance_ : Le référentiel GitHub du projet est devenu mon portfolio technique principal lors de mes recherches d'alternance.
-- _Aujourd'hui_ : Ce projet a été le tremplin qui m'a permis de décrocher mon poste actuel chez 3F, les recruteurs ayant été convaincus par la rigueur de l'architecture.
+- _Aujourd'hui_ : Ce projet reste une référence solide de ma capacité à concevoir et livrer une application complète de bout en bout.
 
 ## Regard Critique
 
 **Ma valeur ajoutée** : La rigueur apportée à la phase de conception (UML, MCD). Le temps investi dans la modélisation s'est rentabilisé au centuple lors de la phase de développement où très peu de remaniements structurels ont été nécessaires.
 **Enseignements** : J'ai compris l'importance de la règle "Sécurité by Design". L'intégration du contrôle d'accès dans chaque route de l'API dès le premier jour a évité d'immenses casse-têtes de refactorisation par la suite.
-
-## Compétences rattachées
-
-- [Développement Web](/competences/developpement-web)
-- [Modélisation UML](/competences/modelisation-uml)
-- [Sécurité applicative](/competences/securite-applicative)
-- [Bases de données](/competences/bases-de-donnees)

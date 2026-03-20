@@ -23,7 +23,7 @@ Sur Digitao chez 3F, j'ai redige des scenarios de test, participe aux sessions d
 
 **Resultat** : les anomalies ont ete identifiees plus tot, les ecrans ont ete ajustes en fonction des usages reels, et la fiabilite fonctionnelle de l'outil a progresse avant mise a disposition des equipes.
 
-→ *Voir la realisation [Digitao](/realisations/digitao)*
+→ _Voir la realisation [Digitao](/realisations/digitao)_
 
 ### CloudFlop - Debogage du pipeline de chiffrement
 
@@ -31,7 +31,7 @@ Lors du developpement de CloudFlop, un bug subtil dans la derivation des cles de
 
 **Resultat** : bug resolu en 4 heures apres une analyse methodique. La demarche de debogage a ete documentee et partagee avec l'equipe.
 
-→ *Voir la realisation [CloudFlop](/realisations/cloudflop)*
+→ _Voir la realisation [CloudFlop](/realisations/cloudflop)_
 
 ## Autocritique
 
@@ -42,8 +42,3 @@ Avec l'experience, je conseille de commencer par tester les cas d'erreur plutot 
 ## Evolution
 
 Je vise la mise en place de pipelines CI/CD complets sur mes projets personnels. Je me forme actuellement sur Playwright pour les tests E2E sur mes projets web.
-
-## Realisations rattachees
-
-- [Digitao - Plateforme de gestion des appels d'offres immobiliers](/realisations/digitao)
-- [CloudFlop - Application de stockage cloud securisee](/realisations/cloudflop)

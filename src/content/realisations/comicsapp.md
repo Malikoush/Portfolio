@@ -17,7 +17,7 @@ ComicsApp est une application mobile cross-platform (iOS/Android) dédiée aux p
 
 ## Objectifs, Contexte et Enjeux
 
-**Contexte** : Projet personnel initié pour découvrir le développement mobile hybride.
+**Contexte** : Projet initié pour découvrir le développement mobile hybride.
 **Objectif client (moi-même)** : Disposer d'une application fluide et esthétique remplaçant mon fichier Excel de suivi de lecture.
 **Enjeux / Risques** :
 
@@ -44,16 +44,10 @@ ComicsApp est une application mobile cross-platform (iOS/Android) dédiée aux p
 ## Les lendemains du projet
 
 - _Immédiatement après_ : Déploiement d'une version bêta via TestFlight (iOS) et APK (Android) pour mon cercle proche.
-- _À distance_ : Le projet a été présenté lors de mes entretiens de recrutement, démontrant ma curiosité technique hors cursus scolaire.
-- _Aujourd'hui_ : Je continue d'utiliser l'application personnellement, et je prévois une migration vers Expo Router pour le système de navigation.
+- _À distance_ : Ce projet m'a permis de découvrir concrètement le développement mobile cross-platform avec React Native, une technologie que je n'avais pas eu l'occasion d'explorer en cours.
+- _Aujourd'hui_ : Le projet est en pause, mais il reste une bonne base si je souhaite reprendre le développement mobile à l'avenir.
 
 ## Regard Critique
 
 **Ma valeur ajoutée** : L'effort mis sur le design. Beaucoup de projets personnels de développeurs négligent l'esthétique ; j'ai pris le temps de concevoir une interface qui n'a rien à envier aux applications commerciales.
 **Enseignements** : Le développement mobile hybride est puissant, mais les problèmes de dépendances (npm, Gradle, CocoaPods) peuvent vite devenir cauchemardesques si l'environnement de développement n'est pas parfaitement maîtrisé. J'ai appris à lire des logs d'erreurs natifs (Java/Objective-C) même en écrivant du JavaScript.
-
-## Compétences rattachées
-
-- [Développement Web](/competences/developpement-web) _(Transfert des compétences JS au mobile)_
-- [Design & UX](/competences/design-ux)
-- [API & Intégration](/competences/api-integration)

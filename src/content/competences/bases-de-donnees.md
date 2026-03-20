@@ -20,9 +20,9 @@ Dans l'industrie logicielle, une mauvaise conception de base de donnees est l'un
 
 ### Base Oracle volumineuse chez 3F
 
-Chez 3F, je travaille quotidiennement avec une base Oracle de plusieurs dizaines de tables metier. J'ai ecrit des requetes complexes et optimise plusieurs traitements qui causaient des timeouts.
+Chez 3F, je travaille quotidiennement avec une base Oracle de plusieurs dizaines de tables métier. J'ai écrit des requêtes complexes et optimisé plusieurs traitements critiques en analysant les plans d'exécution.
 
-**Resultat** : une procedure critique de calcul a vu son temps d'execution passer de 45 secondes a 3 secondes apres analyse du plan et ajout d'index composites.
+**Resultat** : une procédure critique de calcul auparavant instable a été stabilisée et rendue fiable en production, après analyse approfondie du plan d'exécution et restructuration des requêtes impliquées.
 
 ### Digitao - Modelisation des flux d'achat
 
@@ -30,7 +30,7 @@ Sur Digitao, j'ai participe a la conception et a l'evolution du schema Oracle po
 
 **Resultat** : une base plus coherente avec le fonctionnement metier, capable de soutenir un processus fiable et tracable dans le temps.
 
-→ *Voir la realisation [Digitao](/realisations/digitao)*
+→ _Voir la realisation [Digitao](/realisations/digitao)_
 
 ### CloudFlop - Modelisation des metadonnees chiffrees
 
@@ -38,7 +38,7 @@ Sur le projet CloudFlop, j'ai concu la structure de donnees pour stocker les met
 
 **Resultat** : architecture de donnees robuste, validee lors d'une revue de securite.
 
-→ *Voir la realisation [CloudFlop](/realisations/cloudflop)*
+→ _Voir la realisation [CloudFlop](/realisations/cloudflop)_
 
 ## Autocritique
 
@@ -48,10 +48,4 @@ Cette competence fonctionne dans tous les contextes, mais necessite de bien conn
 
 ## Evolution
 
-Je souhaite approfondir les bases de donnees distribuees et le cloud data. Je prevois de suivre une formation specialisee sur l'optimisation Oracle dans le cadre de mon alternance chez 3F.
-
-## Realisations rattachees
-
-- [CloudFlop - Application de stockage cloud securisee](/realisations/cloudflop)
-- [Let'Style - Plateforme de personnalisation vestimentaire](/realisations/letstyle)
-- [Digitao - Plateforme de gestion des appels d'offres immobiliers](/realisations/digitao)
+Je souhaite approfondir mes connaissances en bases de données et continuer à monter en compétences sur les problématiques de performance et de modélisation avancée, au fil des projets et des défis rencontrés en entreprise.

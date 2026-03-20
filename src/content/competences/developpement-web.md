@@ -30,7 +30,7 @@ Digitao illustre ma capacite a intervenir sur une application web professionnell
 
 **Resultat** : contribution concrete a un outil interne qui centralise un processus metier critique pour les equipes achats de 3F.
 
-→ *Voir la realisation [Digitao](/realisations/digitao)*
+→ _Voir la realisation [Digitao](/realisations/digitao)_
 
 ### Let'Style - Application web full-stack
 
@@ -38,7 +38,7 @@ Let'Style est une plateforme web developpee de zero avec gestion des utilisateur
 
 **Resultat** : application fonctionnelle avec 100 % des fonctionnalites specifiees dans le cahier des charges.
 
-→ *Voir la realisation [Let'Style](/realisations/letstyle)*
+→ _Voir la realisation [Let'Style](/realisations/letstyle)_
 
 ## Autocritique
 
@@ -48,10 +48,4 @@ Cette competence est transferable a tous les contextes numeriques, mais exige un
 
 ## Evolution
 
-Je continue de progresser sur les frameworks modernes et sur TypeScript pour renforcer la robustesse de mon code. Mon prochain objectif est d'obtenir une certification cloud pour completer mon profil full-stack.
-
-## Realisations rattachees
-
-- [Let'Style - Plateforme de personnalisation vestimentaire](/realisations/letstyle)
-- [SpotyMike - Application musicale intelligente](/realisations/spotymike)
-- [Digitao - Plateforme de gestion des appels d'offres immobiliers](/realisations/digitao)
+Je continue de progresser sur les frameworks modernes et sur TypeScript pour renforcer la robustesse de mon code. Mon prochain objectif est de monter en compétences sur les problématiques <strong>DevOps et d'infrastructure cloud</strong>, afin de compléter mon profil full-stack et mieux appréhender le cycle de vie complet d'une application.

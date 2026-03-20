@@ -48,7 +48,7 @@ En tant que référent technique et développeur full-stack sur ce projet, j'ai 
 
 ## Les lendemains du projet
 
-- _Immédiatement après_ : Le projet a reçu une excellente note (18/20) et a été mis en avant par l'école comme exemple de bonne intégration d'APIs tierces.
+- _Immédiatement après_ : Le projet a été évalué positivement par l'école, validant les modules liés au développement mobile et à l'intégration d'APIs tierces.
 - _À distance_ : Le code source a servi de référence (template) pour d'autres projets nécessitant de l'OAuth.
 - _Aujourd'hui_ : L'application n'est plus maintenue activement (clés d'API expirées), mais les principes architecturaux que j'y ai développés sont ceux que j'applique quotidiennement chez 3F.
 
@@ -56,10 +56,3 @@ En tant que référent technique et développeur full-stack sur ce projet, j'ai 
 
 **Ma valeur ajoutée** : J'ai apporté une structure technique qui a permis au reste de l'équipe d'avancer sereinement sur le front-end sans se soucier de la complexité des requêtes API.
 **Enseignements** : Ne jamais considérer une API tierce gratuite comme un acquis permanent. Le pivot forcé à mi-projet m'a appris la valeur inestimable d'une architecture découplée (l'interface d'abstraction que j'avais créée a sauvé le projet).
-
-## Compétences rattachées
-
-- [API & Intégration](/competences/api-integration)
-- [Agilité](/competences/agilite)
-- [Gestion de projet](/competences/gestion-de-projet)
-- [Design & UX](/competences/design-ux)

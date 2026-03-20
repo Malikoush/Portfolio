@@ -15,11 +15,11 @@ En entreprise numérique, l'Agilité n'est plus une option : c'est le mode de fo
 
 ## Éléments de preuve
 
-### Sprints Scrum chez 3F
+### Participation aux rituels d'équipe chez 3F
 
-Intégré à une équipe Agile chez 3F, j'ai participé à chaque rituel Scrum : sprint planning, daily stand-up, sprint review et rétrospective. J'ai appris à estimer correctement la charge de travail en story points et à communiquer les blocages dès qu'ils apparaissent.
+Au sein de la DSI de 3F, j'ai été intégré aux échanges et points d'équipe rythmant le projet <strong>Access-IT</strong>. J'ai appris à communiquer sur l'avancement de mes tâches, à signaler les blocages rapidement et à m'aligner avec les autres membres de l'équipe sur les priorités en cours.
 
-**Résultat** : Ma vélocité individuelle a progressé de 30 % entre le premier et le troisième sprint, et mes estimations sont devenues plus précises, réduisant les écarts de planning. J'ai contribué à des livrables stables et testés à chaque fin de sprint.
+**Résultat** : Cette immersion dans un contexte de travail collaboratif m'a permis de mieux structurer mon travail au quotidien et de comprendre l'importance de la communication dans une équipe de développement.
 
 ### Pivot mid-projet sur SpotyMike
 
@@ -27,7 +27,7 @@ A mi-parcours du projet SpotyMike, les API Deezer ont été restreintes. L'équi
 
 **Résultat** : Grâce à une approche itérative (code modulaire, fréquentes mises à jour du backlog), nous avons pu absorber ce changement sans remettre en cause le planning global. Le projet a été livré avec toutes les fonctionnalités critiques.
 
-→ *Voir la réalisation [SpotyMike](/realisations/spotymike)*
+→ _Voir la réalisation [SpotyMike](/realisations/spotymike)_
 
 ## Autocritique
 
@@ -37,9 +37,4 @@ Avec le recul que j'ai aujourd'hui, je conseille de toujours commencer par les r
 
 ## Évolution
 
-Je souhaite approfondir ma pratique Agile en visant une certification **PSM I** à l'issue de mon mastère. À moyen terme, je veux pouvoir animer des sprints de manière autonome sur des projets en responsabilité.
-
-## Réalisations rattachées
-
-- [SpotyMike — Application musicale intelligente](/realisations/spotymike)
-- [Let'Style — Plateforme de personnalisation vestimentaire](/realisations/letstyle)
+Je souhaite développer ma communication technique en partageant mes apprentissages avec mon entourage et mes pairs, que ce soit au sein de mon équipe en alternance ou sur des projets personnels. C'est en expliquant les choses aux autres que je consolide le mieux mes propres connaissances.

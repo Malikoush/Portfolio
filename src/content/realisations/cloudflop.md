@@ -23,7 +23,7 @@ CloudFlop est une plateforme expérimentale de stockage de fichiers dans le clou
 **Enjeux / Risques** :
 
 - _Techniques_ : Maîtriser les primitives cryptographiques (AES, PBKDF2) sans créer de failles par une mauvaise implémentation maison.
-- _Performance_ : Le chiffrement côté client via JavaScript/WebCrypto API au sein du navigateur impacte les performances pour les fichiers volumineux.
+- _Performance_ : Le chiffrement côté serveur en Python implique une gestion rigoureuse des ressources pour les fichiers volumineux, afin d'éviter des temps de traitement excessifs.
 - _Risque UX_ : La sécurité absolue implique l'absence de procédure logicielle de "mot de passe oublié" (la perte de la clé = perte des données). Résoudre le défi pédagogique de le faire accepter à l'utilisateur.
 
 ## Étapes de réalisation (Ce que j'ai fait)
@@ -53,9 +53,3 @@ CloudFlop est une plateforme expérimentale de stockage de fichiers dans le clou
 
 **Ma valeur ajoutée** : L'implémentation du traitement des fichiers par "chunks" (morceaux fluides) plutôt qu'en chargeant tout le fichier en RAM d'un coup. C'est l'optimisation qui a rendu l'application utilisable dans un scénario réel de stockage au lieu de planter le navigateur.
 **Enseignements** : On ne crée jamais son propre algorithme de chiffrement. La difficulté de la sécurité applicative n'est pas dans l'algorithme lui-même, mais dans la gestion du cycle de vie des clés et la protection de tous les éléments annexes (métadonnées, logs).
-
-## Compétences rattachées
-
-- [Sécurité applicative](/competences/securite-applicative)
-- [Tests & Débogage](/competences/tests-debogage)
-- [Bases de données](/competences/bases-de-donnees)

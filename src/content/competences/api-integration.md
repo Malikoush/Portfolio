@@ -21,7 +21,7 @@ SpotyMike consomme les APIs de Spotify (recherche, lecture, playlists) et Deezer
 
 **Résultat** : Application fonctionnelle avec un taux de disponibilité > 99 % lors des démos, grâce à un système de fallback Spotify-only en cas d'indisponibilité Deezer.
 
-→ *Voir la réalisation [SpotyMike](/realisations/spotymike)*
+→ _Voir la réalisation [SpotyMike](/realisations/spotymike)_
 
 ### Let'Style — API REST maison documentée
 
@@ -29,19 +29,14 @@ Pour Let'Style, j'ai conçu et documenté une API REST interne exposée aux clie
 
 **Résultat** : API documentée et testée couvrant 100 % des endpoints. La documentation a permis à un étudiant rejoignant le projet en cours de route de contribuer dès le 2e jour.
 
-→ *Voir la réalisation [Let'Style](/realisations/letstyle)*
+→ _Voir la réalisation [Let'Style](/realisations/letstyle)_
 
 ## Autocritique
 
-Mon niveau est de 8/10. Je suis à l'aise avec REST, mais ma progression porte sur GraphQL (que je connais théoriquement mais peu pratiqué) et les architectures event-driven (Kafka, WebSockets). 
+Mon niveau est de 8/10. Je suis à l'aise avec REST, mais ma progression porte sur GraphQL (que je connais théoriquement mais peu pratiqué) et les architectures event-driven (Kafka, WebSockets).
 
 Cette compétence est très transférable mais exige une rigueur constante : une API mal conçue est difficile à faire évoluer sans casser les clients existants. Je conseille d'appliquer le principe "design first" (écrire la spécification OpenAPI avant le code) — cela clarifie les contrats d'interface et réduit les allers-retours.
 
 ## Évolution
 
 Je souhaite approfondir GraphQL et les websockets pour les cas d'usage temps-réel. Je prévois de contribuer à un projet open source exposant une API publique pour gagner en expérience sur les enjeux de compatibilité et de versioning.
-
-## Réalisations rattachées
-
-- [SpotyMike — Application musicale intelligente](/realisations/spotymike)
-- [Let'Style — Plateforme de personnalisation vestimentaire](/realisations/letstyle)

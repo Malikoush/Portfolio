@@ -24,7 +24,7 @@ Sur Digitao, j'ai participe aux rituels de suivi, a la redaction de specificatio
 
 **Resultat** : une meilleure fluidite entre les besoins des equipes achats, la mise en oeuvre technique et les phases de validation utilisateur.
 
-→ *Voir la realisation [Digitao](/realisations/digitao)*
+→ _Voir la realisation [Digitao](/realisations/digitao)_
 
 ### Projet SpotyMike - Chef de projet technique
 
@@ -32,7 +32,7 @@ Sur le projet SpotyMike, j'ai assure le role de referent technique et coordinate
 
 **Resultat** : le projet a ete rendu dans les delais academiques avec des fonctionnalites completes et une architecture propre.
 
-→ *Voir la realisation [SpotyMike](/realisations/spotymike)*
+→ _Voir la realisation [SpotyMike](/realisations/spotymike)_
 
 ## Autocritique
 
@@ -43,9 +43,3 @@ Cette competence fonctionne bien dans la majorite des contextes techniques, mais
 ## Evolution
 
 A moyen terme, je vise la certification PSM I pour formaliser ma pratique Agile. Dans mon projet professionnel, j'ambitionne de prendre des responsabilites de tech lead ou de chef de projet technique sur des projets d'envergure nationale.
-
-## Realisations rattachees
-
-- [SpotyMike - Application musicale intelligente](/realisations/spotymike)
-- [Let'Style - Plateforme de personnalisation vestimentaire](/realisations/letstyle)
-- [Digitao - Plateforme de gestion des appels d'offres immobiliers](/realisations/digitao)

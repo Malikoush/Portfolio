@@ -21,7 +21,7 @@ CloudFlop est une application de stockage cloud où les fichiers sont chiffrés 
 
 **Résultat** : Architecture validée sur les critères de confidentialité (zéro-knowledge). Une analyse de sécurité réalisée dans le cadre d'un cours a relevé 0 vulnérabilité critique sur la couche chiffrement.
 
-→ *Voir la réalisation [CloudFlop](/realisations/cloudflop)*
+→ _Voir la réalisation [CloudFlop](/realisations/cloudflop)_
 
 ### Let'Style — Authentification JWT et RBAC
 
@@ -29,7 +29,7 @@ Sur Let'Style, j'ai mis en place un système d'authentification par tokens JWT a
 
 **Résultat** : Aucun incident de sécurité lors des tests de pénétration automatisés (OWASP ZAP). Les rôles sont correctement cloisonnés : un client ne peut pas accéder aux routes admin, même en manipulant les tokens.
 
-→ *Voir la réalisation [Let'Style](/realisations/letstyle)*
+→ _Voir la réalisation [Let'Style](/realisations/letstyle)_
 
 ## Autocritique
 
@@ -39,9 +39,4 @@ Cette compétence est indissociable du contexte : une application interne et une
 
 ## Évolution
 
-Je prépare une autoformation sur la certification **OSCP (Offensive Security Certified Professional)** à horizon 2-3 ans. À court terme, je vise la maîtrise des outils de SAST/DAST (SonarQube, Burp Suite) pour intégrer l'analyse de sécurité dans les pipelines CI/CD.
-
-## Réalisations rattachées
-
-- [CloudFlop — Application de stockage cloud sécurisée](/realisations/cloudflop)
-- [Let'Style — Plateforme de personnalisation vestimentaire](/realisations/letstyle)
+Je souhaite approfondir mes connaissances en sécurité applicative, notamment sur les outils d'analyse statique et dynamique du code, afin d'intégrer naturellement les bonnes pratiques de sécurité dans mes développements au quotidien.
