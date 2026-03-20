@@ -34,6 +34,19 @@ const realisationsLinks: { label: string; href: string }[] = [
   { label: "SpotyMike", href: "/realisations/spotymike/" },
 ];
 
+const socialLinks = [
+  {
+    href: "https://github.com/Malikoush",
+    label: "GitHub",
+    icon: "github-logo",
+  },
+  {
+    href: "https://www.linkedin.com/in/martin-ouedraogo-213a34229/",
+    label: "LinkedIn",
+    icon: "linkedin-logo",
+  },
+];
+
 /** Test if a link is pointing to the current page. */
 const isCurrentPage = (href: string) => {
   let pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
@@ -82,6 +95,22 @@ const isCurrentPage = (href: string) => {
   </noscript>
   <noscript>
     <div class="menu-footer">
+      <div class="social-links">
+        {
+          socialLinks.map(({ href, label, icon }) => (
+            <a
+              href={href}
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              title={label}
+            >
+              <Icon icon={icon} size="1.25rem" />
+            </a>
+          ))
+        }
+      </div>
       <div class="theme-toggle">
         <ThemeToggle />
       </div>
@@ -159,6 +188,22 @@ const isCurrentPage = (href: string) => {
       </li>
     </ul>
     <div class="menu-footer">
+      <div class="social-links">
+        {
+          socialLinks.map(({ href, label, icon }) => (
+            <a
+              href={href}
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              title={label}
+            >
+              <Icon icon={icon} size="1.25rem" />
+            </a>
+          ))
+        }
+      </div>
       <div class="theme-toggle">
         <ThemeToggle />
       </div>
@@ -344,6 +389,36 @@ const isCurrentPage = (href: string) => {
     background-color: var(--gray-999);
     border-radius: 0 0 0.75rem 0.75rem;
     box-shadow: var(--shadow-lg);
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--icon-size) + 2 * var(--icon-padding));
+    height: calc(var(--icon-size) + 2 * var(--icon-padding));
+    color: var(--gray-300);
+    text-decoration: none;
+    border-radius: 999rem;
+    background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
+    box-shadow: var(--shadow-md);
+    transition:
+      color var(--theme-transition),
+      background-color var(--theme-transition),
+      transform var(--theme-transition);
+  }
+
+  .social-link:hover,
+  .social-link:focus {
+    color: var(--gray-0);
+    background-color: var(--accent-subtle-overlay);
+    transform: translateY(-1px);
   }
 
   .theme-toggle {
