@@ -17,9 +17,40 @@ const { title, description } = Astro.props;
 
 <html lang="fr">
 	<head>
+		<meta charset="utf-8" />
+  		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="google-site-verification" content="YHxuSxLqJpygUiTWH80972YYk-MA7wvsyZEFFBrthGw" />
-		<MainHead title={title} description={description} />
-	</head>
+		
+  <!-- SEO principal -->
+  <title>{title ?? "Ouedraogo Martin | Portfolio Développeur Web"}</title>
+  <meta name="description" content={description ?? "Portfolio de Ouedraogo Martin, développeur web. Découvrez mes projets, compétences et contactez-moi."} />
+
+  <!-- canonical -->
+  <link rel="canonical" href="https://ouedraogo-martin.vercel.app/" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Ouedraogo Martin - Portfolio" />
+  <meta property="og:description" content="Portfolio de Ouedraogo Martin, développeur web" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ouedraogo-martin.vercel.app/" />
+
+  <!-- Schema Person (très important) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ouedraogo Martin",
+    "url": "https://ouedraogo-martin.vercel.app",
+    "jobTitle": "Développeur Web",
+    "sameAs": [
+      "https://github.com/Malikoush",
+      "https://linkedin.com/in/martin-ouedraogo-213a34229"
+    ]
+  }
+  </script>
+
+  <MainHead title={title} description={description} />
+</head>
 	<body>
 		<div class="stack backgrounds">
 			<Nav />
