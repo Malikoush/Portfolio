@@ -62,24 +62,32 @@ const experiences = [
       <div class="timeline-container">
         {
           experiences.map((item, index) => (
-            <div class={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}>
-              <div class="timeline-dot">
-                <Icon icon={item.logo as any} size="1.5rem" />
-              </div>
-              <div class="timeline-content box">
-                <span class="period">{item.period}</span>
-                <h3 class="title">{item.title}</h3>
-                <h4 class="location">{item.location}</h4>
+            <a href={`/parcours/${item.id}/`} class="timeline-link">
+              <div
+                class={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}
+              >
+                <div class="timeline-dot">
+                  <Icon icon={item.logo as any} size="1.5rem" />
+                </div>
+                <div class="timeline-content box">
+                  <span class="period">{item.period}</span>
+                  <h3 class="title">{item.title}</h3>
+                  <h4 class="location">{item.location}</h4>
 
-                <div class="details-section">
-                  <ul>
-                    {item.details.map((detail) => (
-                      <li>{detail}</li>
-                    ))}
-                  </ul>
+                  <div class="details-section">
+                    <ul>
+                      {item.details.map((detail) => (
+                        <li>{detail}</li>
+                      ))}
+                    </ul>
+                    <div class="read-more">
+                      <Icon icon="arrow-right" size="1rem" />
+                      <span>En savoir plus</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           ))
         }
       </div>
@@ -89,6 +97,18 @@ const experiences = [
 </BaseLayout>
 
 <style>
+  .timeline-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+    transition: opacity var(--theme-transition);
+  }
+
+  .timeline-link:hover {
+    opacity: 0.9;
+  }
+
   .timeline-container {
     position: relative;
     max-width: 1000px;
@@ -199,6 +219,26 @@ const experiences = [
     position: absolute;
     left: 0;
     color: var(--accent-regular);
+  }
+
+  .read-more {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gray-800);
+    color: var(--accent-regular);
+    font-weight: 500;
+    font-size: var(--text-sm);
+  }
+
+  .read-more span {
+    transition: transform var(--theme-transition);
+  }
+
+  .timeline-link:hover .read-more span {
+    transform: translateX(3px);
   }
 
   @media (min-width: 50em) {

@@ -26,7 +26,11 @@ const projects = (await getCollection("realisations")).sort(
         {
           projects.map((project) => (
             <li>
-              <PortfolioPreview project={project} base="/realisations" />
+              <PortfolioPreview
+                project={project}
+                base="/realisations"
+                showDescriptionOnHover
+              />
             </li>
           ))
         }

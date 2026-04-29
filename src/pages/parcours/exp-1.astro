@@ -1,0 +1,237 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContactCTA from "../../components/ContactCTA.astro";
+import Hero from "../../components/Hero.astro";
+import Icon from "../../components/Icon.astro";
+
+const experience = {
+  id: "exp-1",
+  type: "entreprise",
+  period: "2024 – Présent",
+  title: "Concepteur-Développeur Web (Alternance)",
+  location: "3F",
+  logo: "building",
+  statut: "Alternant",
+  responsabilite: "Développeur Full-Stack",
+  role: [
+    "Dans le cadre de mon alternance chez 3F, j’occupe un poste de concepteur-développeur web au sein d’une équipe de développement interne. Mon rôle consiste à participer à la conception, à l’évolution et à la maintenance d’applications utilisées par les équipes métier de l’entreprise.",
+    "Cette expérience me permet de travailler dans un environnement professionnel réel, avec des projets existants, des contraintes métier, des délais, des utilisateurs finaux et des processus de validation. Je ne suis donc pas uniquement dans une logique d’apprentissage technique : je contribue à des outils qui ont un impact concret sur le fonctionnement interne de l’entreprise.",
+    "Mon positionnement est celui d’un développeur full-stack en progression, capable d’intervenir à la fois sur le code, la base de données, les spécifications, les tests et les échanges avec les utilisateurs métier. Cette polyvalence me permet de mieux comprendre le cycle complet d’une application, depuis l’expression du besoin jusqu’à la mise à disposition d’une fonctionnalité.",
+  ],
+  positionnement: [
+    "Au sein de l’équipe, je me situe à l’interface entre les besoins fonctionnels et leur traduction technique. Je participe aux développements, mais aussi à la compréhension des demandes, à la rédaction de spécifications et aux phases de recette utilisateur.",
+    "Cette position est particulièrement formatrice, car elle m’oblige à dépasser une vision purement technique du développement. Avant d’écrire du code, il faut comprendre pourquoi une fonctionnalité est demandée, à qui elle s’adresse, quelles règles métier elle doit respecter et quelles conséquences elle peut avoir sur l’existant.",
+    "Chez 3F, j’ai également appris à travailler avec des environnements techniques déjà en place, notamment des applications PHP, une base de données Oracle volumineuse et des processus internes structurés. Cette réalité m’a permis de progresser en rigueur, en autonomie et en capacité d’adaptation.",
+  ],
+  visionEntreprise: [
+    "3F est un acteur majeur du logement social en France. Son activité repose sur des enjeux humains, sociaux et organisationnels importants : accompagner les locataires, gérer un parc immobilier conséquent, structurer des processus internes et garantir la fiabilité des services rendus.",
+    "Cette expérience m’a permis de comprendre que le numérique, dans une entreprise comme 3F, n’est pas une finalité en soi. Les outils développés doivent avant tout soutenir les métiers, fluidifier les processus, fiabiliser les données et améliorer le quotidien des utilisateurs internes.",
+    "J’ai progressivement pris conscience de l’importance de l’alignement entre les besoins métier et les solutions techniques. Une application peut être bien développée sur le plan technique, mais perdre de sa valeur si elle ne correspond pas aux usages réels. À l’inverse, une solution bien pensée, même simple, peut avoir un impact important lorsqu’elle répond précisément à un besoin opérationnel.",
+  ],
+  missions: [
+    "Mes missions chez 3F couvrent plusieurs aspects du développement web et du cycle projet. Je participe d’abord au développement et à la maintenance d’applications internes, principalement autour de technologies comme PHP, JavaScript, SQL et Oracle. Ces tâches m’amènent à corriger des anomalies, faire évoluer des fonctionnalités existantes et contribuer à de nouveaux modules métier.",
+    "Je suis également impliqué dans la modélisation et l’exploitation des données. Les applications internes reposent sur des bases Oracle importantes, avec de nombreuses tables métier. J’ai donc été amené à écrire des requêtes SQL, analyser certains traitements et participer à l’optimisation de requêtes lorsque la performance ou la fiabilité était en jeu.",
+    "Une autre partie de mes missions concerne la rédaction de spécifications fonctionnelles. Cette étape me permet de formaliser les besoins avant leur développement, de clarifier les règles métier et d’éviter les incompréhensions entre les attentes des utilisateurs et la solution technique produite.",
+    "Je participe aussi aux sessions de recette utilisateur. Ces moments sont essentiels, car ils permettent de vérifier que les fonctionnalités développées correspondent réellement aux besoins du terrain. Les retours des utilisateurs me permettent d’ajuster certains écrans, de corriger des anomalies et de mieux comprendre l’impact concret de mon travail.",
+    "Enfin, je prends part aux rituels d’équipe, comme les points d’avancement, les échanges de suivi ou les démonstrations. Ces rituels m’aident à mieux organiser mon travail, à signaler rapidement les blocages et à rester aligné avec les priorités du projet.",
+  ],
+  apports: [
+    "Cette alternance représente une étape importante dans ma professionnalisation. Elle me permet de consolider mes compétences techniques, mais aussi de développer des compétences transverses essentielles : communication avec les métiers, compréhension d’un besoin, gestion des priorités, recette utilisateur et adaptation à un environnement existant.",
+    "Elle m’a aussi appris qu’un développeur en entreprise ne travaille jamais uniquement pour produire du code. Il intervient dans un écosystème plus large, où chaque décision technique doit tenir compte des utilisateurs, des contraintes de maintenance, des données, de la sécurité et des objectifs de l’organisation.",
+    "Aujourd’hui, cette expérience renforce mon projet professionnel : évoluer vers un profil full-stack capable de comprendre à la fois les enjeux techniques et métier, puis à moyen terme vers des responsabilités de tech lead ou de chef de projet technique.",
+  ],
+  realisations: [{ title: "Digitao", href: "/realisations/digitao/" }],
+  competences: [
+    { title: "Bases de données", href: "/competences/bases-de-donnees/" },
+    { title: "Tests & Débogage", href: "/competences/tests-debogage/" },
+    { title: "Communication", href: "/competences/communication/" },
+    { title: "Adaptabilité", href: "/competences/adaptabilite/" },
+  ],
+};
+---
+
+<BaseLayout
+  title={`${experience.title} | Martin OUEDRAOGO`}
+  description={`Expérience professionnelle chez ${experience.location}`}
+>
+  <div class="stack gap-20">
+    <main class="wrapper stack gap-8">
+      <Hero
+        title={experience.title}
+        tagline={`${experience.location} • ${experience.period}`}
+        align="start"
+      />
+
+      <div class="experience-details">
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Statut</h3>
+            <p>{experience.statut}</p>
+          </div>
+          <div class="info-card">
+            <h3>Responsabilité</h3>
+            <p>{experience.responsabilite}</p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h3>Mon rôle chez 3F</h3>
+          {experience.role.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        <div class="content-section">
+          <h3>Mon positionnement dans l'entreprise</h3>
+          {experience.positionnement.map((paragraph) => <p>{paragraph}</p>)}
+
+          <h3>Ma vision de l'entreprise</h3>
+          {experience.visionEntreprise.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        <div class="content-section">
+          <h3>Détail de mes missions</h3>
+          {experience.missions.map((mission) => <p>{mission}</p>)}
+        </div>
+
+        <div class="content-section">
+          <h3>Ce que cette expérience m’apporte</h3>
+          {experience.apports.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        <div class="links-section">
+          <div class="realisations">
+            <h3>Réalisations associées</h3>
+            <ul>
+              {
+                experience.realisations.map((realisation) => (
+                  <li>
+                    <a href={realisation.href} class="link">
+                      <Icon icon="external-link" size="1rem" />
+                      {realisation.title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+          <div class="competences">
+            <h3>Compétences développées</h3>
+            <ul>
+              {
+                experience.competences.map((competence) => (
+                  <li>
+                    <a href={competence.href} class="link">
+                      <Icon icon="external-link" size="1rem" />
+                      {competence.title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .experience-details {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .info-card {
+    background: var(--gray-999);
+    border: 1px solid var(--gray-800);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .info-card h3 {
+    color: var(--gray-100);
+    margin-bottom: 0.5rem;
+    font-size: var(--text-lg);
+  }
+
+  .info-card p {
+    color: var(--gray-300);
+    margin: 0;
+  }
+
+  .content-section {
+    margin-bottom: 3rem;
+  }
+
+  .content-section h3 {
+    color: var(--gray-100);
+    margin-bottom: 1rem;
+    font-size: var(--text-xl);
+  }
+
+  .content-section h3:not(:first-child) {
+    margin-top: 2.5rem;
+  }
+
+  .content-section p {
+    color: var(--gray-300);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .links-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .realisations h3,
+  .competences h3 {
+    color: var(--gray-100);
+    margin-bottom: 1rem;
+    font-size: var(--text-lg);
+  }
+
+  .realisations ul,
+  .competences ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .realisations li,
+  .competences li {
+    margin-bottom: 0.75rem;
+  }
+
+  .link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-regular);
+    text-decoration: none;
+    transition: color var(--theme-transition);
+  }
+
+  .link:hover {
+    color: var(--accent-light);
+  }
+
+  @media (max-width: 768px) {
+    .links-section {
+      grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

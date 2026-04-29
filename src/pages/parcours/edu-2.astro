@@ -1,0 +1,189 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContactCTA from "../../components/ContactCTA.astro";
+import Hero from "../../components/Hero.astro";
+import Icon from "../../components/Icon.astro";
+
+const formation = {
+  id: "edu-2",
+  type: "formation",
+  period: "2021 – 2023",
+  title: "Cycle Préparatoire / Bachelor Numérique",
+  location: "ESIEA",
+  logo: "student",
+  presentation: [
+    "Le cycle préparatoire / Bachelor Numérique de l’ESIEA constitue la première étape de mon parcours dans l’école. Cette période m’a permis de construire les bases nécessaires pour évoluer ensuite vers une formation d’ingénieur spécialisée dans le numérique.",
+    "L’objectif principal de ce cycle était de développer des fondamentaux solides en mathématiques, en algorithmique, en programmation et en méthodologie de travail. Ces enseignements m’ont aidé à acquérir une manière de raisonner plus structurée, indispensable pour analyser un problème, le découper en étapes et proposer une solution technique cohérente.",
+    "Cette formation a également joué un rôle important dans ma transition vers les métiers du développement. Elle m’a permis de découvrir progressivement différents domaines du numérique, tout en développant la rigueur et l’esprit d’analyse attendus dans un parcours d’ingénierie.",
+  ],
+  visionPedagogie: [
+    "La pédagogie du cycle préparatoire repose sur une progression étape par étape. Les bases théoriques sont d’abord posées, puis rapidement mises en pratique à travers des exercices, des projets et des travaux de groupe. Cette méthode m’a permis de mieux comprendre les notions étudiées, car elles étaient directement appliquées à des cas concrets.",
+    "Ce fonctionnement m’a particulièrement aidé à développer mon autonomie. Face à un problème de programmation ou d’algorithmique, il ne suffisait pas de connaître une syntaxe : il fallait comprendre la logique, tester différentes approches, corriger ses erreurs et améliorer progressivement sa solution.",
+    "Les projets réalisés pendant cette période m’ont aussi appris à travailler avec d’autres étudiants. J’ai découvert l’importance de la communication, de la répartition des tâches et de la cohérence dans un projet collectif. Cette dimension a été essentielle pour me préparer aux projets plus avancés de la suite de mon cursus, mais aussi à mon expérience en entreprise.",
+  ],
+  details: [
+    "Entre 2021 et 2023, j’ai acquis les fondamentaux qui structurent encore aujourd’hui ma manière de développer. J’ai notamment travaillé l’algorithmique, la programmation en C#, ainsi que les principes de la programmation orientée objet. Ces bases m’ont permis de comprendre comment organiser un programme, structurer des classes, manipuler des données et concevoir des traitements plus maintenables.",
+    "La formation m’a également initié au développement web, aussi bien côté front-end que back-end. J’ai progressivement découvert la création d’interfaces, la logique serveur, les échanges entre les différentes couches d’une application et les premières notions d’architecture applicative.",
+    "J’ai aussi été formé aux bases de données et à la gestion de projet. Ces enseignements m’ont permis de comprendre qu’une application ne repose pas seulement sur du code, mais aussi sur une bonne organisation des données, une planification claire et une capacité à travailler en équipe.",
+    "Enfin, ce cycle a contribué au développement de compétences transversales importantes, comme la communication, la rigueur, l’autonomie et le travail collaboratif. Il a constitué une base solide pour la suite de mon parcours à l’ESIEA et pour ma montée en compétence vers un profil de développeur full-stack.",
+  ],
+  realisations: [{ title: "SpotyMike", href: "/realisations/spotymike/" }],
+  competences: [
+    { title: "API & Intégration", href: "/competences/api-integration/" },
+    { title: "Bases de données", href: "/competences/bases-de-donnees/" },
+    { title: "Design & UX", href: "/competences/design-ux/" },
+    { title: "Communication", href: "/competences/communication/" },
+  ],
+};
+---
+
+<BaseLayout
+  title={`${formation.title} | Martin OUEDRAOGO`}
+  description={`Formation à ${formation.location}`}
+>
+  <div class="stack gap-20">
+    <main class="wrapper stack gap-8">
+      <Hero
+        title={formation.title}
+        tagline={`${formation.location} • ${formation.period}`}
+        align="start"
+      />
+
+      <div class="formation-details">
+        <div class="presentation-section">
+          <h3>Présentation de l'établissement</h3>
+          {formation.presentation.map((paragraph) => <p>{paragraph}</p>)}
+
+          <h3>Vision de la pédagogie</h3>
+          {formation.visionPedagogie.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        <div class="details-section">
+          <h3>Détails de la formation</h3>
+          {formation.details.map((detail) => <p>{detail}</p>)}
+        </div>
+
+        <div class="links-section">
+          <div class="realisations">
+            <h3>Réalisations associées</h3>
+            <ul>
+              {
+                formation.realisations.map((realisation) => (
+                  <li>
+                    <a href={realisation.href} class="link">
+                      <Icon icon="external-link" size="1rem" />
+                      {realisation.title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+          <div class="competences">
+            <h3>Compétences développées</h3>
+            <ul>
+              {
+                formation.competences.map((competence) => (
+                  <li>
+                    <a href={competence.href} class="link">
+                      <Icon icon="external-link" size="1rem" />
+                      {competence.title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .formation-details {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .presentation-section {
+    margin-bottom: 3rem;
+  }
+
+  .presentation-section h3 {
+    color: var(--gray-100);
+    margin-bottom: 1rem;
+    font-size: var(--text-xl);
+  }
+
+  .presentation-section h3:not(:first-child) {
+    margin-top: 2.5rem;
+  }
+
+  .presentation-section p {
+    color: var(--gray-300);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .details-section {
+    margin-bottom: 3rem;
+  }
+
+  .details-section h3 {
+    color: var(--gray-100);
+    margin-bottom: 1rem;
+    font-size: var(--text-xl);
+  }
+
+  .details-section p {
+    color: var(--gray-300);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .links-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .realisations h3,
+  .competences h3 {
+    color: var(--gray-100);
+    margin-bottom: 1rem;
+    font-size: var(--text-lg);
+  }
+
+  .realisations ul,
+  .competences ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .realisations li,
+  .competences li {
+    margin-bottom: 0.75rem;
+  }
+
+  .link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-regular);
+    text-decoration: none;
+    transition: color var(--theme-transition);
+  }
+
+  .link:hover {
+    color: var(--accent-light);
+  }
+
+  @media (max-width: 768px) {
+    .links-section {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

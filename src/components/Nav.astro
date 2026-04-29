@@ -5,15 +5,17 @@ import ThemeToggle from "./ThemeToggle.astro";
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
   { label: "Accueil", href: "/" },
-  { label: "Présentation", href: "/presentation/" },
-  { label: "Parcours", href: "/parcours/" },
   { label: "Contact", href: "/contact/" },
 ];
 
 /** Submenus items */
+const accueilLinks: { label: string; href: string }[] = [
+  { label: "Présentation", href: "/presentation/" },
+  { label: "Parcours", href: "/parcours/" },
+];
+
 const competencesLinks: { label: string; href: string }[] = [
   { label: "Toutes les compétences", href: "/competences/" },
-  { label: "Développement Web", href: "/competences/developpement-web/" },
   { label: "API & Intégration", href: "/competences/api-integration/" },
   { label: "Bases de données", href: "/competences/bases-de-donnees/" },
   { label: "Modélisation UML", href: "/competences/modelisation-uml/" },
@@ -23,6 +25,7 @@ const competencesLinks: { label: string; href: string }[] = [
   { label: "Agilité", href: "/competences/agilite/" },
   { label: "Communication", href: "/competences/communication/" },
   { label: "Design & UX", href: "/competences/design-ux/" },
+  { label: "Gestion de projet", href: "/competences/gestion-de-projet/" },
 ];
 
 const realisationsLinks: { label: string; href: string }[] = [
@@ -54,6 +57,9 @@ const isCurrentPage = (href: string) => {
   if (pathname.at(-1) !== "/") pathname += "/";
   return pathname === href || (href !== "/" && pathname.startsWith(href));
 };
+
+const isAccueilSection =
+  isCurrentPage("/") || accueilLinks.some(({ href }) => isCurrentPage(href));
 ---
 
 <nav class="sticky-nav">
@@ -93,44 +99,31 @@ const isCurrentPage = (href: string) => {
       }
     </ul>
   </noscript>
-  <noscript>
-    <div class="menu-footer">
-      <div class="social-links">
-        {
-          socialLinks.map(({ href, label, icon }) => (
-            <a
-              href={href}
-              class="social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              title={label}
-            >
-              <Icon icon={icon} size="1.25rem" />
-            </a>
-          ))
-        }
-      </div>
-      <div class="theme-toggle">
-        <ThemeToggle />
-      </div>
-    </div>
-  </noscript>
   <div id="menu-content" hidden>
     <ul class="nav-items">
-      <li>
+      <li class="dropdown">
         <a
-          aria-current={isCurrentPage("/") ? "page" : null}
-          class="link"
-          href="/">Accueil</a
+          aria-current={isAccueilSection ? "page" : null}
+          class="link dropdown-toggle"
+          href="/"
         >
-      </li>
-      <li>
-        <a
-          aria-current={isCurrentPage("/presentation/") ? "page" : null}
-          class="link"
-          href="/presentation/">Présentation</a
-        >
+          <span>Accueil</span>
+        </a>
+        <ul class="dropdown-menu">
+          {
+            accueilLinks.map(({ label, href }) => (
+              <li>
+                <a
+                  aria-current={isCurrentPage(href) ? "page" : null}
+                  href={href}
+                  class="dropdown-link"
+                >
+                  {label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
       </li>
       <li class="dropdown">
         <a
@@ -171,13 +164,6 @@ const isCurrentPage = (href: string) => {
             ))
           }
         </ul>
-      </li>
-      <li>
-        <a
-          aria-current={isCurrentPage("/parcours/") ? "page" : null}
-          class="link"
-          href="/parcours/">Parcours</a
-        >
       </li>
       <li>
         <a
@@ -251,16 +237,18 @@ const isCurrentPage = (href: string) => {
 <style>
   nav.sticky-nav {
     z-index: 9999;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     font-family: var(--font-brand);
     font-weight: 500;
-    margin-bottom: 3.5rem;
     background-color: hsl(0deg 0% 100% / 0%);
   }
 
   .menu-header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
     padding: 1.5rem;
@@ -311,6 +299,7 @@ const isCurrentPage = (href: string) => {
     position: absolute;
     left: 0;
     right: 0;
+    top: 100%;
   }
 
   .nav-items {
@@ -372,7 +361,8 @@ const isCurrentPage = (href: string) => {
   }
 
   .dropdown-link:hover,
-  .dropdown-link:focus {
+  .dropdown-link:focus,
+  .dropdown-link[aria-current="page"] {
     color: var(--gray-0);
     background-color: var(--accent-subtle-overlay);
     border-radius: 0.5rem;

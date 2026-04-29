@@ -1,0 +1,195 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContactCTA from "../../components/ContactCTA.astro";
+import Hero from "../../components/Hero.astro";
+import Icon from "../../components/Icon.astro";
+
+const formation = {
+  id: "edu-1",
+  type: "formation",
+  period: "2023 – 2026",
+  title: "Mastère Expert en Ingénierie du Développement d'Applications",
+  location: "ESIEA (École d'ingénieurs du monde numérique)",
+  logo: "graduation-cap",
+  presentation: [
+    "L’ESIEA est une école d’ingénieurs spécialisée dans le numérique, fondée en 1958. Elle forme des ingénieurs capables d’intervenir sur l’ensemble de la chaîne de valeur des systèmes d’information, depuis la conception d’une solution jusqu’à son exploitation. Son positionnement est orienté vers les enjeux actuels du secteur informatique : innovation, cybersécurité, architecture logicielle, transformation numérique et adaptation rapide aux évolutions technologiques.",
+    "Ce cadre de formation me permet de développer une vision globale du métier d’ingénieur. L’objectif n’est pas seulement d’apprendre à utiliser des langages ou des outils, mais de comprendre comment concevoir des solutions fiables, sécurisées, maintenables et adaptées à des besoins réels. Cette approche correspond à mon projet professionnel, car je souhaite évoluer vers un profil full-stack capable de comprendre à la fois les enjeux techniques, fonctionnels et organisationnels d’un projet informatique.",
+  ],
+  visionPedagogie: [
+    "La pédagogie de l’ESIEA repose fortement sur l’apprentissage par la pratique. Les enseignements théoriques sont régulièrement complétés par des projets, des études de cas, des travaux de groupe et des mises en situation proches du monde professionnel. Cette méthode me convient particulièrement, car elle permet de transformer rapidement une notion étudiée en compétence réellement mobilisable.",
+    "Le rythme en alternance renforce encore cette dynamique. Les connaissances acquises en formation peuvent être appliquées en entreprise, tandis que les situations rencontrées en entreprise donnent plus de sens aux cours. Cette complémentarité crée un lien direct entre l’apprentissage académique et l’expérience professionnelle. Elle m’aide à prendre du recul sur mes pratiques, à mieux comprendre les exigences du terrain et à progresser plus rapidement.",
+    "Cette pédagogie développe aussi des compétences humaines essentielles. Les projets en équipe, les soutenances, les revues de travail et les échanges avec les enseignants ou intervenants professionnels m’ont permis de progresser en communication, en organisation, en adaptabilité et en gestion de projet. Ces qualités sont indispensables pour devenir un ingénieur capable de travailler avec des profils variés et de contribuer efficacement à un projet collectif.",
+  ],
+  details: [
+    "Je suis actuellement en 2ème année en alternance à l’ESIEA. Ma formation me permet d’approfondir des domaines directement liés à mon projet professionnel, notamment l’architecture logicielle, les bases de données avancées, la cybersécurité applicative et le développement d’applications robustes.",
+    "Les enseignements suivis me permettent également de renforcer ma pratique des méthodes de gestion de projet, en particulier les approches agiles comme Scrum. Ces méthodes sont importantes dans mon parcours, car elles m’aident à mieux organiser le travail, prioriser les tâches, communiquer avec une équipe et suivre l’évolution d’un projet dans le temps.",
+    "Au-delà des compétences techniques, cette formation contribue à développer des compétences transversales indispensables : la communication, le travail en équipe, l’autonomie, la capacité d’adaptation et la prise de recul. Ces apprentissages complètent mon expérience en entreprise et participent à la construction de mon profil d’ingénieur en développement informatique.",
+  ],
+  realisations: [
+    { title: "Let'Style", href: "/realisations/letstyle/" },
+    { title: "ComicsApp", href: "/realisations/comicsapp/" },
+  ],
+  competences: [
+    { title: "Modélisation UML", href: "/competences/modelisation-uml/" },
+    {
+      title: "Sécurité applicative",
+      href: "/competences/securite-applicative/",
+    },
+    { title: "Bases de données", href: "/competences/bases-de-donnees/" },
+    { title: "Gestion de projet", href: "/competences/gestion-de-projet/" },
+    { title: "Communication", href: "/competences/communication/" },
+    { title: "Agilité", href: "/competences/agilite/" },
+  ],
+};
+---
+
+<BaseLayout
+  title={`${formation.title} | Martin OUEDRAOGO`}
+  description={`Formation à ${formation.location}`}
+>
+  <div class="stack gap-20">
+    <main class="wrapper stack gap-8">
+      <Hero
+        title={formation.title}
+        tagline={`${formation.location} • ${formation.period}`}
+        align="start"
+      />
+
+      <div class="formation-details">
+        <div class="presentation-section">
+          <h3>Présentation de l'établissement</h3>
+          {formation.presentation.map((paragraph) => <p>{paragraph}</p>)}
+
+          <h3>Vision de la pédagogie</h3>
+          {formation.visionPedagogie.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        <div class="details-section">
+          <h3>Détails de la formation</h3>
+          {formation.details.map((detail) => <p>{detail}</p>)}
+        </div>
+
+        <div class="links-section">
+          <div class="realisations">
+            <h3>Réalisations associées</h3>
+            <ul>
+              {
+                formation.realisations.map((realisation) => (
+                  <li>
+                    <a href={realisation.href} class="link">
+                      <Icon icon="external-link" size="1rem" />
+                      {realisation.title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+          <div class="competences">
+            <h3>Compétences développées</h3>
+            <ul>
+              {
+                formation.competences.map((competence) => (
+                  <li>
+                    <a href={competence.href} class="link">
+                      <Icon icon="external-link" size="1rem" />
+                      {competence.title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .formation-details {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .presentation-section {
+    margin-bottom: 3rem;
+  }
+
+  .presentation-section h3 {
+    color: var(--gray-100);
+    margin-bottom: 1rem;
+    font-size: var(--text-xl);
+  }
+
+  .presentation-section h3:not(:first-child) {
+    margin-top: 2.5rem;
+  }
+
+  .presentation-section p {
+    color: var(--gray-300);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .details-section {
+    margin-bottom: 3rem;
+  }
+
+  .details-section h3 {
+    color: var(--gray-100);
+    margin-bottom: 1rem;
+    font-size: var(--text-xl);
+  }
+
+  .details-section p {
+    color: var(--gray-300);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .links-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .realisations h3,
+  .competences h3 {
+    color: var(--gray-100);
+    margin-bottom: 1rem;
+    font-size: var(--text-lg);
+  }
+
+  .realisations ul,
+  .competences ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .realisations li,
+  .competences li {
+    margin-bottom: 0.75rem;
+  }
+
+  .link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-regular);
+    text-decoration: none;
+    transition: color var(--theme-transition);
+  }
+
+  .link:hover {
+    color: var(--accent-light);
+  }
+
+  @media (max-width: 768px) {
+    .links-section {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
